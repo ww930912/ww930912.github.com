@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>Cordova App之HTML5的坑 | WUWEI&#39;S BLOG</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="WUWEI">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="generator" content="WUWEI'S BLOG">
+    <meta name="author" content="WUWEI">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="http://7xljcv.com1.z0.glb.clouddn.com/img/favicon.ico" type="image/ico">
+    <link rel="apple-touch-icon" href="http://7xljcv.com1.z0.glb.clouddn.com/img/favicon3.png"/>
+    <link rel="alternate" href="/atom.xml" title="WUWEI&#39;S BLOG" type="application/atom+xml">
+    <link rel="stylesheet" href="http://7xljcv.com1.z0.glb.clouddn.com/css/ally.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="http://7xljcv.com1.z0.glb.clouddn.com/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="http://7xljcv.com1.z0.glb.clouddn.com/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="http://7xljcv.com1.z0.glb.clouddn.com/js/jquery-1.11.2.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="http://7xljcv.com1.z0.glb.clouddn.com/js/html5shiv.min.js"></script>
+    <script src="http://7xljcv.com1.z0.glb.clouddn.com/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- baidu_tongji -->
+    
+
+    <script type="text/javascript">
+    //iOS Web APP
+    if(("standalone" in window.navigator) && window.navigator.standalone){
+      var noddy, remotes = false;
+      document.addEventListener('click', function(event) {
+        noddy = event.target;
+        while(noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
+          noddy = noddy.parentNode;
+        }
+        if('href' in noddy && noddy.href.indexOf('http') !== -1 && (noddy.href.indexOf(document.location.host) !== -1 || remotes)){
+          event.preventDefault();
+          document.location.href = noddy.href;
+        }
+      },false);
+    }
+    </script>
+</script>
+
+
+
+
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="http://7xljcv.com1.z0.glb.clouddn.com/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">TYPES<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/App/" class="animsition-link">App<small>(6)</small></a></li>
+				    
+				    <li><a href="/categories/Browser/" class="animsition-link">Browser<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/CSS/" class="animsition-link">CSS<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Cordova/" class="animsition-link">Cordova<small>(5)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/Hexo/" class="animsition-link">Hexo<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(5)</small></a></li>
+				    
+				    <li><a href="/categories/Life/" class="animsition-link">Life<small>(10)</small></a></li>
+				    
+				    <li><a href="/categories/MVVM/" class="animsition-link">MVVM<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/Markdown/" class="animsition-link">Markdown<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Tools/" class="animsition-link">Tools<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/架构/" class="animsition-link">架构<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/驾考/" class="animsition-link">驾考<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://yanyaner.com/" class="animsition-link">yanyaner</a></li>
+                    
+                    <li><a href="http://bakbio.cn/" class="animsition-link">zhangli</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="http://7xljcv.com1.z0.glb.clouddn.com/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">WUWEI'S BLOG</a></li>
+                            <li class="nolink"><span>Never </span>Give up.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <!-- ============================ Hero Image =========================== -->
+
+        <section id="hero" class="scrollme">
+            <div class="container-fluid element-img" style="background: url(http://7xljcv.com1.z0.glb.clouddn.com/2016/04/23/1.jpg) no-repeat center center fixed;background-size: cover">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                        <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                            <div>
+                            	
+                                <h2>STAY <span>HUNGRY</span> , STAY <span>FOOLISH</span>.</h2>
+                                <p></p>
+				    			
+                                <h2></h2>
+                                <p>求知若饥，虚心若愚。</p>
+				    			
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // .col-md-12 -->
+                </div>
+                <div class="herofade beige-dk"></div>
+            </div>
+        </section>
+
+        <!-- Height spacing helper -->
+        <div class="heightblock"></div>
+        <!-- // End height spacing helper -->
+
+        <!-- ============================ END Hero Image =========================== -->
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2015-12-05T12:41:56.000Z" itemprop="datePublished">
+          2015-12-05
+      </time>
+    
+    
+    | 
+    <a href='/tags/App/'>App</a>
+    
+    
+</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span id="busuanzi_container_page_pv">浏览:<span id="busuanzi_value_page_pv"></span></span>
+                <h1>Cordova App之HTML5的坑</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="使用HTML5，请仔细考虑"><a href="#使用HTML5，请仔细考虑" class="headerlink" title="使用HTML5，请仔细考虑"></a>使用HTML5，请仔细考虑</h3><p>当你想用HTML5进行Android和IOS开发的时候，一定要记住IOS上面的性能绝对比Andoird上面好，因此在进行测试的时候，一定要选择一个安卓机。还要记住一句话，<strong>HTML5的支持要靠不同厂家WebView的配合，但是现在厂商配合的也都千奇百怪！</strong><br>当自己满怀信心的去做App时，被第一个需求就坑了一个星期，重点坑的地方不是代码本身，而是HTML5的兼容。</p>
+<hr>
+<h3 id="第一个需求：用画布画视频当背景"><a href="#第一个需求：用画布画视频当背景" class="headerlink" title="第一个需求：用画布画视频当背景"></a>第一个需求：用画布画视频当背景</h3><p>用英语来说就是use canvas darw video for backgroud.<br>为什么我想这样做呢？<br>因为我想做一款App产品与其他的产品不同。当你随便进入一款App的时候，首先会有一个首页，当数据加载后，首页消失，进入主页UI，这就是所有App的特点。而我之前的想法是进入App首先还是会有一个首页，当数据加载后，首页消失，进入主页后视频画面就是App的背景。</p>
+<p>为什么必须要用画布画视频当背景这种方式来实现呢？<br>因为做App时需要考虑的不仅仅是设备的系统，还包括设备的分辨率、尺寸等，如果直接用Video当背景就不能适配所有设备；如果直接用canvas当背景，用代码自己画确实也行，但我美术功底确实很Low，算术很久没碰，于是乎果断放弃。</p>
+<p>好了，在我看来唯一能很好解决这个问题的就是使用Canvas循环画出Video里面的内容，且让Video循环播放。接下来说下自己遇到了哪些坑让我不得不放弃这个需求：</p>
+<ol>
+<li>Video标签在IOS WebView上使用muted属性来控制音量静音无效</li>
+<li>Video标签在Android WebView上使用autoplay属性来自动播放无效</li>
+<li>Canvas标签在Android WebView上使用drawImage方法画视频无效</li>
+<li>IOS设备上Home主页与应用主页来回切换出现闪退</li>
+</ol>
+<p>上面四个坑我解决了三个，还差一个，怎么解决的没时间细说，等以后有空在讲解。那放弃这个需求的真正原因是什么呢？因为麻烦，且W3C规范对各种设备的不兼容，尽管在<a href="http://caniuse.com/" target="_blank" rel="external">caniuse.com</a>上看到HTML5的哪些标签能支持哪些平台，即使解决了平台的兼容性，但是在不同平台上使用每个标签的每个属性的兼容性还是不确定，W3C还有很长的路要走。</p>
+<hr>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2015/12/07/初识AngularJS/" style="float: left;">
+        ← 初识AngularJS
+    </a>
+    
+    
+    <a class="pull-right" href="/2015/11/30/Cordova命令和最佳开发流程/">
+        Cordova命令和最佳开发流程 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2015/12/05/Cordova-App之HTML5的坑/" data-title="Cordova App之HTML5的坑" data-url="http://vmartaw.com/2015/12/05/Cordova-App之HTML5的坑/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"vmartaw"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p><span id="busuanzi_container_site_pv" style='display:none'>您是本站第<span id="busuanzi_value_site_pv"></span>位访问者</span></p>
+                <p>
+                    &copy; 2012<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By 吴伟. All Rights Reserved.
+                </p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>

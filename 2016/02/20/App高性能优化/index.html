@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>App高性能优化 | WUWEI&#39;S BLOG</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="WUWEI">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="generator" content="WUWEI'S BLOG">
+    <meta name="author" content="WUWEI">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="http://7xljcv.com1.z0.glb.clouddn.com/img/favicon.ico" type="image/ico">
+    <link rel="apple-touch-icon" href="http://7xljcv.com1.z0.glb.clouddn.com/img/favicon3.png"/>
+    <link rel="alternate" href="/atom.xml" title="WUWEI&#39;S BLOG" type="application/atom+xml">
+    <link rel="stylesheet" href="http://7xljcv.com1.z0.glb.clouddn.com/css/ally.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="http://7xljcv.com1.z0.glb.clouddn.com/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="http://7xljcv.com1.z0.glb.clouddn.com/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="http://7xljcv.com1.z0.glb.clouddn.com/js/jquery-1.11.2.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="http://7xljcv.com1.z0.glb.clouddn.com/js/html5shiv.min.js"></script>
+    <script src="http://7xljcv.com1.z0.glb.clouddn.com/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- baidu_tongji -->
+    
+
+    <script type="text/javascript">
+    //iOS Web APP
+    if(("standalone" in window.navigator) && window.navigator.standalone){
+      var noddy, remotes = false;
+      document.addEventListener('click', function(event) {
+        noddy = event.target;
+        while(noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
+          noddy = noddy.parentNode;
+        }
+        if('href' in noddy && noddy.href.indexOf('http') !== -1 && (noddy.href.indexOf(document.location.host) !== -1 || remotes)){
+          event.preventDefault();
+          document.location.href = noddy.href;
+        }
+      },false);
+    }
+    </script>
+</script>
+
+
+
+
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="http://7xljcv.com1.z0.glb.clouddn.com/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">TYPES<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/App/" class="animsition-link">App<small>(6)</small></a></li>
+				    
+				    <li><a href="/categories/Browser/" class="animsition-link">Browser<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/CSS/" class="animsition-link">CSS<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Cordova/" class="animsition-link">Cordova<small>(5)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/Hexo/" class="animsition-link">Hexo<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(5)</small></a></li>
+				    
+				    <li><a href="/categories/Life/" class="animsition-link">Life<small>(10)</small></a></li>
+				    
+				    <li><a href="/categories/MVVM/" class="animsition-link">MVVM<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/Markdown/" class="animsition-link">Markdown<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Tools/" class="animsition-link">Tools<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/架构/" class="animsition-link">架构<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/驾考/" class="animsition-link">驾考<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://yanyaner.com/" class="animsition-link">yanyaner</a></li>
+                    
+                    <li><a href="http://bakbio.cn/" class="animsition-link">zhangli</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="http://7xljcv.com1.z0.glb.clouddn.com/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">WUWEI'S BLOG</a></li>
+                            <li class="nolink"><span>Never </span>Give up.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <!-- ============================ Hero Image =========================== -->
+
+        <section id="hero" class="scrollme">
+            <div class="container-fluid element-img" style="background: url(http://7xljcv.com1.z0.glb.clouddn.com/2016/04/23/1.jpg) no-repeat center center fixed;background-size: cover">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                        <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                            <div>
+                            	
+                                <h2>STAY <span>HUNGRY</span> , STAY <span>FOOLISH</span>.</h2>
+                                <p></p>
+				    			
+                                <h2></h2>
+                                <p>求知若饥，虚心若愚。</p>
+				    			
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // .col-md-12 -->
+                </div>
+                <div class="herofade beige-dk"></div>
+            </div>
+        </section>
+
+        <!-- Height spacing helper -->
+        <div class="heightblock"></div>
+        <!-- // End height spacing helper -->
+
+        <!-- ============================ END Hero Image =========================== -->
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-02-20T06:23:34.000Z" itemprop="datePublished">
+          2016-02-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/App/'>App</a>
+    
+    
+</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span id="busuanzi_container_page_pv">浏览:<span id="busuanzi_value_page_pv"></span></span>
+                <h1>App高性能优化</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="性能优秀的App标准"><a href="#性能优秀的App标准" class="headerlink" title="性能优秀的App标准"></a>性能优秀的App标准</h3><p>一个App体验好不好，关键一点在于性能，性能优秀的App，下面几个指标缺一不可：</p>
+<ul>
+<li>快速启动</li>
+<li>对用户点击事件的快速反应</li>
+<li>快速页面切换</li>
+<li>流畅的滚动</li>
+<li>流畅的动画</li>
+</ul>
+<hr>
+<h3 id="Cordova开发难点"><a href="#Cordova开发难点" class="headerlink" title="Cordova开发难点"></a>Cordova开发难点</h3><p>使用Cordova开发App入门很容易，难点在于以下几点：<br><strong>1.性能优化</strong><br>我们来张图看看为何Android Cordova App、IOS Cordova App，Android Native App，IOS Native App存在性能差异。<br><img src="http://7xljcv.com1.z0.glb.clouddn.com/2016%2F02%2F16%2Fb2.png" alt="cordova" title="DOM"><br>从上图我们可以清晰的看出为何IOS Native App天生会比Android Native App快（理论上），因为它中间少了一层JAVA层（目前的Android5+系统已经跳过了这个中间层了（art模式））。<br>利用Cordova开发的App在两种系统上面又多加了一层JS层（其实还多加了一个渲染层（浏览器的渲染引擎）），所以Cordova App自然就会比Native App慢。<br>但是无论如何IOS上面的Cordova App天生还是会比Android上面的Cordova App快，因为Android多了一个JAVA层，更不用说IOS系统本身优化的就比Android好。<br>如果你前端水平还可以，比较有经验，又是个爱思考的孩子的话，写出的Cordova App在IOS上面基本不会有什么卡顿。因为IOS系统是很优秀的，IOS webview也没有什么严重的残疾，IPhone手机硬件本身配置也是很不错的。<br>综合上面可以知道Android Cordova App容易卡顿的原因有以下几个方面：<br>1.android机器配置参数不齐<br>市面上的Android手机种类很多，高、中、低端都有，Cordova App在中低端机器上面容易出现卡顿。<br>2.android系统碎片化<br>Android手机系统版本基本上是越高，系统优化的越好，尤其是webview的优化，4+以上版本系统的webview性能比2.3版本系统提升了一大截，Android4.4+比4.0~4.3版本系统的webview在性能上面又有明显提升。<br>问题在于android手机系统各个版本（4+以上）都占有不错的市场份额，所以开发的App必须兼顾到这些版本系统。<br>3.android webview天生残缺<br>例如android webview原生滚动功能就是个残废，滚动事件支持的非常不全。基于android webview原生的滚动，使用Cordova开发App是很难实现下拉刷新，无限滚动加载等App必备功能，通常只能利用JS滚动来模拟。<br>所以Cordova App绝大部分优化都是针对Android的，当然Android优化的越流畅，IOS上面自然就会更加流畅。<br><strong>2.填坑</strong><br>上面的属于性能坑，这里的坑是指不同系统，不同系统版本而造成的css bug、浏览器 bug等。<br><strong>3.原生插件开发</strong><br>这个没有什么好说的，如果你想做，你就老老实实学Andoid和IOS原生开发吧。</p>
+<hr>
+<h3 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h3><p>Cordova App本质是一个浏览器壳子里面跑了一个网页，所以毫无疑问Cordova App首要优化工作在HTML、JS、CSS上面。在学习这篇文章之前，建议下看下这篇文章“<a href="http://www.vmartaw.com/2016/02/15/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E9%83%A8%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/" target="_blank" rel="external"><strong>浏览器内部工作原理</strong></a>”，了解一下浏览器的工作原理，注意里面的“DOM树”、“渲染树”、“布局”、“重绘”等概念。因为下文的讲解中我会反复提到这些概念。只有理解了这些概念，你才能理解下文中的优化原理。下面将从HTML、CSS、JS三方面讲解性能优化。</p>
+<hr>
+<h3 id="HTML优化"><a href="#HTML优化" class="headerlink" title="HTML优化"></a>HTML优化</h3><p>减少HTML的复杂性和页面的元素数量是构建极速网页，影响成功的关键性因素。在该节，将尽可能全面的介绍如何编写快速加载和易于维护的简洁干净的HTML。</p>
+<p>1.正确使用HTML、CSS和JS<br>HTML是一种标记语言，用于表示结构和给内容赋予意义的。<br>HTML不应被用来样式化内容。不要只是为了显得更大就把文字写在h1~h6中。相反，使用CSS来改变元素的外观和布局。</p>
+<p>2.基本原则<br>a.使用HTML确定结构；使用CSS确定展现；使用JavaScript确定行为。<br>b.使用HTML，必要时借助CSS，并且在不得已时再添加JS。例如：在多数情况下尽可能使用CSS3来代替JS动画。<br>c.将CSS和JS从你的HTML代码中分离。</p>
+<hr>
+<h3 id="1-使用正确的文档结构"><a href="#1-使用正确的文档结构" class="headerlink" title="1.使用正确的文档结构"></a>1.使用正确的文档结构</h3><p>使用HTML5的文档类型，下面是一个正确的文档结构：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>一起玩吧<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"css/css/font-awesome.min.css"</span> /&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"css/global.css"</span> /&gt;</span> </span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">--</span> <span class="attr">...</span> <span class="attr">--</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span> <span class="attr">src</span>=<span class="string">"./js/lib/doT.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span> <span class="attr">src</span>=<span class="string">"./js/lib/banner.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>通常我们在head元素中引入CSS，这样浏览器就可以在解析HTML前预先加载样式而不会呈现一个混乱的页面布局。<br>把JavaScriptS放在页面的最底部，在body封闭之前。这将提供页面渲染时间，因为浏览器可以在JavaScript加载前将页面渲染出来。</p>
+<hr>
+<h3 id="2-书写正确的HTML代码"><a href="#2-书写正确的HTML代码" class="headerlink" title="2.书写正确的HTML代码"></a>2.书写正确的HTML代码</h3><p>Web网页成功的一个主要因素就是浏览器可以处理无效的HTML，现代浏览器都有容错机制，HTML5标准设置还规定了浏览器应该能够处理哪几种错误。<br>也许你认为这不值得一提，但是尤其对于用Cordova开发的App，写合法的HTML是极其正确的。因为在低端Android手机上面每个新手写出来的App基本上都会卡。<br>有效的HTML更容易调试，占用资源更少，因为它们会跳过浏览器的容错机制所以渲染速度更快，无效的HTLM只会影响渲染速度。<br>因此在编写HTML代码的时候，请务必在非自封闭的元素后加上结束标签。</p>
+<hr>
+<h3 id="3-使用单页面应用架构（SPA）"><a href="#3-使用单页面应用架构（SPA）" class="headerlink" title="3.使用单页面应用架构（SPA）"></a>3.使用单页面应用架构（SPA）</h3><p>这个我在前面已经讲过，Cordova App本质就是在浏览器上看网页，非SAP应用每次切换页面需要做各种重复的初始化工作（这个会严重影响性能），使用SPA架构可以省去这些重复的初始化工作。另外使用SPA架构可以简化DOM结构，因为App不管有多少个页面，都是跑在一个Html页面里面。<br>具体参见：“<a href="http://www.vmartaw.com/2015/11/27/%E5%BC%80%E5%8F%91Cordova-App%E7%9A%84%E9%BB%84%E9%87%91%E5%AE%88%E5%88%99/" target="_blank" rel="external"><strong>开发Cordova App的黄金守则</strong></a>”。</p>
+<hr>
+<h3 id="4-简化DOM结构"><a href="#4-简化DOM结构" class="headerlink" title="4.简化DOM结构"></a>4.简化DOM结构</h3><p>Cordova（本质就是增强型的浏览器）在加载完页面之后，首先解析HTML构建DOM树，然后解析CSS布局DOM树中可视化节点构建出Render树（渲染树），最后绘制页面到屏幕上。</p>
+<p><img src="http://7xljcv.com1.z0.glb.clouddn.com/2016/02/15/image025.png" alt="tree" title="tree"></p>
+<p>图1：渲染树及对应的DOM树</p>
+<p>根据上图用最少的DOM去构建一个DOM元素，意味着浏览器创建DOM树越简单，构建就越快，占用内存越少。同理根据DOM树和CSS创建出来的渲染树也越简单，布局会越快，从而使Cordova绘制页面的速度也就越快。</p>
+<p>简化HTML结构，可以从两方面入手：</p>
+<ol>
+<li>去掉冗余的HTML代码（html不合理嵌套）</li>
+<li>减少数据展现（根据业务）</li>
+</ol>
+<hr>
+<h3 id="5-其他注意事项"><a href="#5-其他注意事项" class="headerlink" title="5.其他注意事项"></a>5.其他注意事项</h3><p>a.不要在HTML中添加事件处理<br>这样非常难以维护，如以下代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">'stop'</span> <span class="attr">onclick</span>=<span class="string">'stopTouch();'</span>&gt;</span>stop<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>在JS文件里添加事件处理，这样就好多了：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="string">'#stop'</span>).on(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        ...</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>b.正确使用HTML标记<br>例如HTML5引入了一些新的“语义化元素”，像&lt;header&gt;、&lt;footer&gt;和&lt;nav&gt;。<br>使用正确的元素表达正确的内容对于可读性，可维护性是非常有帮助的。<br>使用&lt;h1&gt; ~ &lt;h6&gt;代表标题，&lt;ul&gt;或&lt;ol&gt;代表列表。<br>使用&lt;header&gt;、&lt;footer&gt;、&lt;nav&gt;和&lt;aside&gt;表示文档正确的模块。<br>使用&lt;p&gt;写正文。<br>使用&lt;em&gt;和&lt;strong&gt;代替&lt;i&gt;和&lt;b&gt;表示强调。<br>使用&lt;label&gt;元素为input类型添加标签。<br>混合文字和元素会导致布局的问题，如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>姓名：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span>/&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>最好用下面的表示：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span>&gt;</span>姓名：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>c.不要用HTML来布局<br>HTML是用来组织结构和赋予内容一定意义，而不是用来设置页面显示成什么样子的。<br>Flex布局是CSS3的一种推荐响应式弹性布局，能用就用。<br>使用&lt;p&gt;元素代表文本，而不是用来布局。<br>避免使用&lt;br&gt;来换行，使用块级元素和CSS来代替。<br>避免使用水平分割线&lt;hr&gt;，使用CSS的border样式来控制。<br>不要使用table来布局，table渲染时间是div数倍以上。<br>不要使用不必要的Div。<br>要了解哪些元素是块级元素，避免在Div中放置不必要的块级元素。</p>
+<hr>
+<h3 id="CSS优化"><a href="#CSS优化" class="headerlink" title="CSS优化"></a>CSS优化</h3><p>如果你不是个有代码洁癖的人，可能会想CSS都要优化，是不是有点“”挢抂过正“了。也许你在桌面PC浏览器或者手机浏览器上面甚至利用Cordova开发IOS App都不太会觉察到一个CSS能带来多么大的性能影响，但是在中低端Android手机上面有时一个CSS就能导致你整个App性能直线下降，手机能烤鸡蛋。</p>
+<h3 id="浏览器解析CSS方式"><a href="#浏览器解析CSS方式" class="headerlink" title="浏览器解析CSS方式"></a>浏览器解析CSS方式</h3><p>浏览器解析选择器是从右到左的方式，和我们阅读的顺序是相反的。<br>如下面这个CSS代码：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#afui</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span>&#123;<span class="attribute">color</span>:<span class="number">#00f</span>;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>浏览器会首先从最右边寻找a元素（可能会很多），然后沿着DOM树向上查找，筛选出在li元素里面的a元素，然后继续向上面筛选，最后筛选出匹配整条规则的a元素。</p>
+<hr>
+<h3 id="1-浏览器本身对CSS选择器的优化（只需了解）"><a href="#1-浏览器本身对CSS选择器的优化（只需了解）" class="headerlink" title="1.浏览器本身对CSS选择器的优化（只需了解）"></a>1.浏览器本身对CSS选择器的优化（只需了解）</h3><p>如今的浏览器已经不是几年前傻乎乎的浏览器了，它们在CSS选择器优化方面已经做得很好了，从而使我们的CSS代码能够保持良好的结构，不必太担心性能问题。<br>下面我们看看WebKit为核心的浏览器主要做了哪些优化工作：</p>
+<h3 id="样式共享策略"><a href="#样式共享策略" class="headerlink" title="样式共享策略"></a>样式共享策略</h3><p>”样式共享策略“使浏览器不必再为一个已经计算过的元素样式重新计算一次。请看下面的代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>WuWei<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Hello,World!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>如果浏览器渲染引擎已经计算了第一个&lt;p&gt;元素的样式，那么”样式共享策略“就会让浏览器避免计算第二个&lt;p&gt;元素的样式，直接共享第一个&lt;p&gt;计算出来的样式结果。<br>既然我们知道了浏览器本身有这么个优化策略，那么我们在编写CSS代码的时候就要多多投其所好，提高页面渲染速度。</p>
+<h3 id="哈希规则策略"><a href="#哈希规则策略" class="headerlink" title="哈希规则策略"></a>哈希规则策略</h3><p>我们已经知道了浏览器是从右向左开发解析匹配样式规则的，所以最右边的选择器是非常重要的。<br>”哈希规则策略“根据选择器最右边的部分将样式表分为若干个组。<br>例如下面的代码：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span>&#123;&#125;</span><br><span class="line"><span class="selector-tag">div</span> <span class="selector-tag">p</span>&#123;&#125;</span><br><span class="line"><span class="selector-tag">div</span> <span class="selector-tag">p</span><span class="selector-class">.legal</span>&#123;&#125;</span><br><span class="line"><span class="selector-id">#sidebar</span> <span class="selector-tag">a</span>&#123;&#125;</span><br><span class="line"><span class="selector-id">#sidebar</span> <span class="selector-tag">p</span>&#123;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>将被分为下图中的三个组：<br><img src="http://7xljcv.com1.z0.glb.clouddn.com/2016/02/16/a.png" alt="three" title="three"><br>这样在渲染的时候浏览器就不必检查样式表中的每个样式规则，而是从最有可能匹配到该元素的那个样式组里面开始查找，极大提高了效率。</p>
+<hr>
+<h3 id="2-书写精简的CSS代码"><a href="#2-书写精简的CSS代码" class="headerlink" title="2.书写精简的CSS代码"></a>2.书写精简的CSS代码</h3><p>a.避免过度约束<br>一条普通规则，不要添加不必要的约束。<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/*不良代码*/</span><br><span class="line">ul#foot&#123;..&#125;</span><br><span class="line">.footer#barid&#123;..&#125;</span><br><span class="line"></span><br><span class="line">/*良好代码*/</span><br><span class="line">#foot&#123;..&#125;</span><br><span class="line">#barid&#123;..&#125;</span><br></pre></td></tr></table></figure></p>
+<p>b.使用紧凑语法<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*不良代码*/</span></span><br><span class="line"><span class="selector-class">.foot</span>&#123;</span><br><span class="line">    <span class="attribute">padding-top</span>:<span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">padding-left</span>:<span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">padding-bottom</span>:<span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">padding-right</span>:<span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">background</span>:<span class="number">#000</span>;</span><br><span class="line">    <span class="attribute">background-image</span>:<span class="built_in">url</span>(logo.png);</span><br><span class="line">    <span class="attribute">background-position</span>:bottom;</span><br><span class="line">    <span class="attribute">background-repeat</span>:no-repeat;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*良好代码*/</span></span><br><span class="line"><span class="selector-class">.foot</span>&#123;</span><br><span class="line">    <span class="attribute">padding</span>:<span class="number">20px</span> <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">background</span>:<span class="number">#000</span> <span class="built_in">url</span>(logo.png) no-repeat bottom;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>c.精简规则<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*不良代码*/</span></span><br><span class="line"><span class="selector-class">.some</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>:red;</span><br><span class="line">    <span class="attribute">background</span>:blue;</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">font-size</span>:<span class="number">16px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.other</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>:red;</span><br><span class="line">    <span class="attribute">background</span>:blue;</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">font-size</span>:<span class="number">8px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*良好代码*/</span></span><br><span class="line"><span class="selector-class">.some</span>, <span class="selector-class">.other</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>:red;</span><br><span class="line">    <span class="attribute">background</span>:blue;</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">150px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.some</span>&#123;</span><br><span class="line">    <span class="attribute">font-size</span>:<span class="number">16px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.other</span>&#123;</span><br><span class="line">    <span class="attribute">font-size</span>:<span class="number">8px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="3-删除无效的定义"><a href="#3-删除无效的定义" class="headerlink" title="3.删除无效的定义"></a>3.删除无效的定义</h3><p>无效的定义并不会影响页面功能显示，但会影戏渲染树的执行，从而影响页面展示的性能，增加代码量的同时，也增加了浏览器解析代码的时间。</p>
+<hr>
+<h3 id="4-简化Render结构"><a href="#4-简化Render结构" class="headerlink" title="4.简化Render结构"></a>4.简化Render结构</h3><p>浏览器构建渲染树的时候要解析CSS来确定渲染对象的集合属性，从而完成最终渲染树的构建。<br>用最简单（注意简单不是少的意思，而是让浏览器以最快的方式计算出渲染对象布局信息的意思）的CSS去样式化一个DOM，越简单的CSS样式，意味着浏览器构建DOM渲染树越快越简单，绘制的速度也会越快。</p>
+<p>简化HTML结构，可以从两方面入手：<br>a.去掉冗余的CSS<br>b.减少视觉样式</p>
+<p>a.去掉冗余的CSS<br>演示代码如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'info cfx'</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span>&#123;<span class="attribute">text-decoration</span>:none;<span class="attribute">color</span>:<span class="number">#333</span>;&#125;</span><br><span class="line"><span class="selector-id">#afui</span> <span class="selector-class">.wall_item</span> <span class="selector-class">.info</span>&#123;<span class="attribute">padding</span>:<span class="number">4px</span> <span class="number">5px</span>;<span class="attribute">overflow</span>:hidden;&#125;</span><br><span class="line"><span class="selector-id">#afui</span> <span class="selector-class">.cfx</span>&#123;<span class="attribute">clear</span>:both;<span class="attribute">zoom</span>:<span class="number">1</span>;&#125;</span><br><span class="line"><span class="selector-id">#afui</span> <span class="selector-class">.wall_item</span> <span class="selector-class">.info</span> <span class="selector-class">.price</span>&#123;<span class="attribute">color</span>:<span class="number">#aaa</span>;&#125;</span><br><span class="line"><span class="selector-id">#afui</span> <span class="selector-class">.wall_item</span> <span class="selector-class">.info</span> <span class="selector-class">.likes</span>&#123;<span class="attribute">color</span>:<span class="number">#ff5a00</span>;&#125;</span><br></pre></td></tr></table></figure>
+<p>在不改变展示样式的情况下，我们可以作如下处理：<br>去掉div.info元素的cfx样式class，cfx的作用是清楚浮动，但是info class里面有一条属性”overflow:hidden;”同样也是可以清除浮动的，所以重复了，并且后面这种清除浮动方式更高效，因为它不同cfx，cfx需要在元素的底部生成一个不可见元素来实现清除浮动。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'info'</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>结合上面去掉冗余HTML代码，我们可以简化一些CSS代码，如下：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span>&#123;<span class="attribute">text-decoration</span>:none;<span class="attribute">color</span>:<span class="number">#333</span>;&#125;</span><br><span class="line"><span class="selector-id">#afui</span> <span class="selector-class">.wall_item</span> <span class="selector-class">.info</span>&#123;<span class="attribute">padding</span>:<span class="number">4px</span> <span class="number">5px</span>;<span class="attribute">overflow</span>:hidden;&#125;</span><br><span class="line"><span class="selector-id">#afui</span> <span class="selector-class">.wall_item</span> <span class="selector-class">.info</span> <span class="selector-class">.price</span>&#123;<span class="attribute">color</span>:<span class="number">#aaa</span>;&#125;</span><br><span class="line"><span class="selector-id">#afui</span> <span class="selector-class">.wall_item</span> <span class="selector-class">.info</span> <span class="selector-class">.likes</span>&#123;<span class="attribute">color</span>:<span class="number">#ff5a00</span>;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>b.减少视觉样式<br>这里的简化是指不要用过多的同种色彩，加粗等修饰性的css属性。<br>例如div.info元素里面的price class和likes class的color属性可以统一成a标签的color属性，简化后的代码如下：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span>&#123;<span class="attribute">text-decoration</span>:none;<span class="attribute">color</span>:<span class="number">#333</span>;&#125;</span><br><span class="line"><span class="selector-id">#afui</span> <span class="selector-class">.wall_item</span> <span class="selector-class">.info</span>&#123;<span class="attribute">padding</span>:<span class="number">4px</span> <span class="number">5px</span>;<span class="attribute">overflow</span>:hidden;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>当然简化需要html和css的配合，且还需要根据UI设计师给的标注图定。</p>
+<hr>
+<h3 id="5-其他注意事项-1"><a href="#5-其他注意事项-1" class="headerlink" title="5.其他注意事项"></a>5.其他注意事项</h3><p>a.避免让选择符看起来像正则表达式<br>CSS3高级选择器执行耗时长且不易读懂，请避免使用。</p>
+<p>b.CSS类名做状态标记的注意事项（如:active伪元素）<br>如果在网页中使用CSS的类来对节点做状态标记，当这些节点的状态标记类修改时，可能会触发节点的重排和重绘。这时最好只改变颜色这样只会发生重绘，不要使用会触发重排或过多重绘的属性，这样你的页面在低端手机上面会发生抖动。</p>
+<p>c.坚决不使用JS动画使用CSS3动画<br>JavaScript在浏览器的主线程中运行，而其中还有很多需要运行的JavaScript、样式计算、布局、绘制等对其干扰。这也就导致了线程可能出现阻塞，从而造成丢帧的情况。而浏览器可以对CSS3动画进行优化，它必要时可以创建图层，然后在主线程之外运行。<br>利用CSS3实现动画的时候最好用CSS类来实现，而不是通过JS来一句一句的修改元素的CSS，这样可以降低页面的重排与重绘的次数，排除强制刷新Cordova浏览器渲染引擎缓存队列的风险。</p>
+<hr>
+<p>在移动开发中，下面的CSS特性是不建议用的，这样可以加快页面CSS渲染，提高页面滚动流畅度。<br>d.不滥用float<br>Float在渲染时计算量比较大，尽量减少使用，使用flex弹性布局替代。</p>
+<p>e.不滥用border-radius<br>Border-radius属性是用来为元素添加圆角的，但是CSS圆角会产生严重的性能问题，尤其是在低端Android手机上面。</p>
+<p>f.不滥用border-shadow<br>Border-shadow属性是用来为元素添加阴影的，和CSS圆角一样，也会产生严重的性能问题，尤其是在低端Android手机上面。</p>
+<hr>
+<p>在移动开发中，下面的CSS特性是建议用的，而且要常用，这样可以加快页面CSS渲染，提高页面滚动流畅度。</p>
+<p>g.使用transform属性<br>通过节点的transform可以修改节点的位置、旋转、大小等。使用绝对定位元素的left和top属性来修改节点的位置，仍然会发生局部重排，修改时的代价还是比较大，使用translate3d不会发生重排。<br>另外利用translate3d、scale3d、rotate3d做动画的DOM不要嵌套的太深，也不要包含太多的元素，因为如果元素太多，太深超过GPU内存时，你的页面性能会变得非常差。</p>
+<p>h.使用display属性<br>这是个非常好的属性，display=none是命令浏览器不要将该元素加到渲染树中，这样该元素也就不会绘制到屏幕，可以提高GPU效率，减少内存占用，从而大大提高页面的性能。<br>所以对于页面上面看不到的元素根据情况尽量display none掉，注意不要使用visibility:hidden来隐藏元素，它对提高页面性能没有丝毫帮助，因为它还是会留在浏览器构建的渲染树中。</p>
+<p>i.使用absolute或fixed定位<br>当元素的position为static和relative时，元素属于普通的文档流，当对元素的某个操作需要重新渲染时，浏览器会渲染整个页面。如将元素的position设置为absolute和fixed可以使元素从普通DOM文档流脱离出来而独立存在，而浏览器在需要渲染时只需要渲染该元素，其容器元素和其子元素即可，从而只发生局部重排与重绘。<br>举例，请看下面的代码：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wall</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>:absolute;</span><br><span class="line">    <span class="attribute">top</span>:<span class="number">479px</span>;</span><br><span class="line">    <span class="attribute">left</span>:<span class="number">11px</span>;</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">130px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>可以看到我们固定了.wall元素的宽度，这样还有一个好处就是因为我们的元素使用了absolute定位，所以更新.wall里面的内容的时候不会发生全局性的重排。</p>
+<p>j.使用opacity属性<br>透明度改变后，GPU在绘画时只是简单的降低之前已经画好的图层位图alpha值来达到效果，并不需要整体的重绘。</p>
+<p>k.使用width属性（固定元素尺寸）<br>如果可能的话，我们应该利用JS来将元素交给浏览器渲染之前将元素的尺寸的宽和高都计算出来，写在内联CSS样式里，这样浏览器在渲染它们的时候就不用再计算元素的尺寸，这样做的目的是响应式设计和减少浏览器的“重排”时的计算。JS的计算是廉价的，浏览器的重排与重绘代价则是昂贵的。<br>举例，请看下面的代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">width</span>=<span class="string">'130'</span> <span class="attr">height</span>=<span class="string">'130'</span> <span class="attr">class</span>=<span class="string">'pic'</span> <span class="attr">src</span>=<span class="string">'xxx.jpg'</span>/&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>从上面代码可以看出我们直接用JS写死高度和宽度。这样做的好处是图片没有加载之前就可以渲染页面，图片加载完成渲染到页面上面时，图片外的元素不会发生全局重排和重绘，浏览器只是将图片做了一下大小比例调整绘制到页面上。另外提取固定图片的尺寸将会极大提高滚动性能。</p>
+<hr>
+<h3 id="JS优化"><a href="#JS优化" class="headerlink" title="JS优化"></a>JS优化</h3><p>JS优化这方面的东西不能泛泛而谈了，因为JS有很多框架，每个框架的优化也不尽相同。我开发“一起玩吧App”选择的框架是Appframework，所以下面写的东西都是围绕优化Appframework展开的，但是里面的很多理念也是很值得借鉴的。<br>有关“Appframework”的介绍，请参考之前写过的文章：<a href="http://www.vmartaw.com/2016/02/17/Appframework/" target="_blank" rel="external"><strong>Appframework</strong></a>。</p>
+<hr>
+<h3 id="1-快速下载安装"><a href="#1-快速下载安装" class="headerlink" title="1.快速下载安装"></a>1.快速下载安装</h3><p>“一起玩吧App”打包之后不到1.3M。1.3M？也许你觉得不可思议，因为一起玩吧App看起来内容不少。这就是利用Cordova开发App的先天优势，木有办法啊！如果把里面一些不用的东西全部剔除掉，再把文件都压缩一下，估计1M就解决了。<br>这对下载体验来说是非常好的—-秒下载！这听起来很酷，因为它为你的用户节省了很多时间和流量。</p>
+<hr>
+<h3 id="2-快速启动"><a href="#2-快速启动" class="headerlink" title="2.快速启动"></a>2.快速启动</h3><p>在手机上面很多用户愿意用App而不愿意用手机版网站的原因大致有以下几个方面：</p>
+<ul>
+<li>用手机就用App，天经地义。这是一种习惯，和PC上网站就用浏览器一样。</li>
+<li>不愿意输入网站域名，手机上面打字很麻烦（也许你会说可以保持到桌面嘛，绝大多数非IT专业的人不知道这么做）。</li>
+</ul>
+<p>但是如果你的App打开很慢的话，很可能用户就会投到其他App的怀抱里去了。<br>“一起玩吧App”看起来有很多页面，但是可以做到“秒启动”，即使在低端Android上面也可以做到3秒内冷启动（关闭刚刚打开的App叫做热启动，这时候系统一般不会立即释放App刚刚占用的内存，所以一般App热启动都很快）。<br>那么这是如何做到的呢？<br>a.真正的panel延迟加载<br>“一起玩吧App”是使用afui（appframework ui）框架来搭建应用的架构的，是一个SPA架构。App的一个个页面在afui框架中叫做panel，它被放到不同的页面模板文件中（views目录下）。panel切换时前一个panel会被隐藏（display:none）掉。<br>当用户第一次切换到一个新panel时，这个panel没有加载到内存中，所以也就没有构建到DOM树种去。这样做的好处是“一起玩吧App”刚启动时只需要加载第一个panel。<br>本来近百个panel需要一次加载进内存，然后浏览器进行DOM树构建，而现在只需加载一个panel就OK了。<br>下图是切换到一个新panel的流程图：</p>
+<p><img src="http://7xljcv.com1.z0.glb.clouddn.com/2016/02/16/56074f1bd0.png" alt="flow" title="flow"></p>
+<p>图4：切换到新panel的流程</p>
+<p>“一起玩吧App”就是通过这种“延迟加载panel”的方式来做到快速冷启动的。</p>
+<hr>
+<h3 id="3-快速页面切换"><a href="#3-快速页面切换" class="headerlink" title="3.快速页面切换"></a>3.快速页面切换</h3><p>当你的页面比较简单的时候一般你碰不到“页面切换反应迟钝”的问题，尤其在高端Android手机上面，IOS上面更是不在话下。<br>当一个列表页比较长的时候，尤其在中低端Android手机上面，你能够比较快速地进入详情页，但是在后退到原来列表页的时候反应常常会很慢。这是因为后退到原来列表页时，浏览器要渲染，重绘原来的页面，当这个带有图片的列表页比较长的时候，这个重绘过程可能会非常的慢。<br>“一起玩吧App”从以下几个方面来解决这个问题：<br>a.快速响应用户点击事件<br>如果你用Cordova开发App，没有对“click”点击事件进行优化的话，那么手机操作系统本身就会强加300ms延迟才会响应你的点击事件。“一起玩吧App”使用了afui框架，该框架本身对“click”事件做了优化，所以不存在这个问题。</p>
+<p>b.页面切换时不要做耗时操作<br>通常作为用户点击之后希望立即看到页面响应跳转，这时候最好其他的事情都停下来（不要去掉ajax请求），只作页面跳转，如果有特效切换，要等到切换完成时再进行新页面数据加载、渲染以及旧panel事件卸载处理等等。</p>
+<p>c.少使用或不使用页面切换特效<br>在低端Android手机上页面切换特效常常会导致出现卡顿的情况，所以在Android上面尽量不要做特效切换。</p>
+<p>d.隐藏部分列表元素<br>这是最关键一点，上面说了返回列表页面之所以会耗时很长，是因为重新渲染含有图片的大量列表所造成的。<br>那么很自然想到，跳到详情页的时候我们隐藏掉原来列表页的大部分元素就可以了，只留下可视区域的页面不就可以了。当返回到列表页的时候，延迟100ms再将原来隐藏的元素显示出来不久可以了，实际证明，这样做是OK的。<br>最后需要注意的是这种方式隐藏元素需要是绝对布局的，否则你就要注意滚动条的位置了。而且经过前面的介绍，绝对布局不会引起全局的重排重绘，对于利用JS操作这种布局的元素效率会很高。</p>
+<hr>
+<h3 id="3-使用好滚动插件"><a href="#3-使用好滚动插件" class="headerlink" title="3.使用好滚动插件"></a>3.使用好滚动插件</h3><p>a.不要触发无谓的“scroll”事件<br>b.保持滚动容器里的元素简单<br>c.滚动过程中不要有立即点击的交互效果<br>d.请尽量使用原生滚动（IOS上使用元素滚动，Android上使用JS滚动）</p>
+<hr>
+<h3 id="4-使用快速的JS模板引擎"><a href="#4-使用快速的JS模板引擎" class="headerlink" title="4.使用快速的JS模板引擎"></a>4.使用快速的JS模板引擎</h3><p>对于App和服务器之间最正确的做法就是只进行数据交互，就是不要从服务器加载大量html片段，最好只加载JSON数据。对于加载过来的数据你只需使用JS将其添加到页面文档中即可。<br>这时候你就需要拼接字符串了，利用JS拼接字符串是一件很痛苦的事情，也不方便维护和修改。但是你可以借助JS模板引擎，“一起玩吧App”中使用了小巧，高性能的JS模板引擎doT。</p>
+<p>下面是各种常见的JS模板引擎的测试结果：</p>
+<p><img src="http://7xljcv.com1.z0.glb.clouddn.com/2016/02/16/1955785.png" alt="jsTemplate" title="jsTemplate"></p>
+<p>通过对各模板引擎测试结果，可以看出<br><a href="https://github.com/aui/artTemplate" target="_blank" rel="external"><strong>artTemplate</strong></a>，<a href="https://github.com/PaulGuo/Juicer" target="_blank" rel="external"><strong>juicer</strong></a>与<a href="https://github.com/olado/doT" target="_blank" rel="external"><strong>doT</strong></a>引擎模板整体性能要有绝对优势。</p>
+<hr>
+<p>写到这里，关于“App高性能优化”的内容基本上就讲完了。但是还有一个东西值得说说——-Crosswalk。下一篇将着重介绍Crosswalk，请大家尽请期待。</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2016/02/21/App高性能优化之Crosswalk/" style="float: left;">
+        ← App高性能优化之Crosswalk
+    </a>
+    
+    
+    <a class="pull-right" href="/2016/02/18/重排与重绘/">
+        重排与重绘 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/02/20/App高性能优化/" data-title="App高性能优化" data-url="http://vmartaw.com/2016/02/20/App高性能优化/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"vmartaw"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p><span id="busuanzi_container_site_pv" style='display:none'>您是本站第<span id="busuanzi_value_site_pv"></span>位访问者</span></p>
+                <p>
+                    &copy; 2012<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By 吴伟. All Rights Reserved.
+                </p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>

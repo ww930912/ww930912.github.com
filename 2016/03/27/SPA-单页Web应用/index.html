@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>SPA-单页Web应用 | WUWEI&#39;S BLOG</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="WUWEI">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="generator" content="WUWEI'S BLOG">
+    <meta name="author" content="WUWEI">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="http://7xljcv.com1.z0.glb.clouddn.com/img/favicon.ico" type="image/ico">
+    <link rel="apple-touch-icon" href="http://7xljcv.com1.z0.glb.clouddn.com/img/favicon3.png"/>
+    <link rel="alternate" href="/atom.xml" title="WUWEI&#39;S BLOG" type="application/atom+xml">
+    <link rel="stylesheet" href="http://7xljcv.com1.z0.glb.clouddn.com/css/ally.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="http://7xljcv.com1.z0.glb.clouddn.com/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="http://7xljcv.com1.z0.glb.clouddn.com/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="http://7xljcv.com1.z0.glb.clouddn.com/js/jquery-1.11.2.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="http://7xljcv.com1.z0.glb.clouddn.com/js/html5shiv.min.js"></script>
+    <script src="http://7xljcv.com1.z0.glb.clouddn.com/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- baidu_tongji -->
+    
+
+    <script type="text/javascript">
+    //iOS Web APP
+    if(("standalone" in window.navigator) && window.navigator.standalone){
+      var noddy, remotes = false;
+      document.addEventListener('click', function(event) {
+        noddy = event.target;
+        while(noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
+          noddy = noddy.parentNode;
+        }
+        if('href' in noddy && noddy.href.indexOf('http') !== -1 && (noddy.href.indexOf(document.location.host) !== -1 || remotes)){
+          event.preventDefault();
+          document.location.href = noddy.href;
+        }
+      },false);
+    }
+    </script>
+</script>
+
+
+
+
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="http://7xljcv.com1.z0.glb.clouddn.com/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">TYPES<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/App/" class="animsition-link">App<small>(6)</small></a></li>
+				    
+				    <li><a href="/categories/Browser/" class="animsition-link">Browser<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/CSS/" class="animsition-link">CSS<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Cordova/" class="animsition-link">Cordova<small>(5)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/Hexo/" class="animsition-link">Hexo<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(5)</small></a></li>
+				    
+				    <li><a href="/categories/Life/" class="animsition-link">Life<small>(10)</small></a></li>
+				    
+				    <li><a href="/categories/MVVM/" class="animsition-link">MVVM<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/Markdown/" class="animsition-link">Markdown<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Tools/" class="animsition-link">Tools<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/架构/" class="animsition-link">架构<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/驾考/" class="animsition-link">驾考<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://yanyaner.com/" class="animsition-link">yanyaner</a></li>
+                    
+                    <li><a href="http://bakbio.cn/" class="animsition-link">zhangli</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="http://7xljcv.com1.z0.glb.clouddn.com/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">WUWEI'S BLOG</a></li>
+                            <li class="nolink"><span>Never </span>Give up.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <!-- ============================ Hero Image =========================== -->
+
+        <section id="hero" class="scrollme">
+            <div class="container-fluid element-img" style="background: url(http://7xljcv.com1.z0.glb.clouddn.com/2016/04/23/1.jpg) no-repeat center center fixed;background-size: cover">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                        <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                            <div>
+                            	
+                                <h2>STAY <span>HUNGRY</span> , STAY <span>FOOLISH</span>.</h2>
+                                <p></p>
+				    			
+                                <h2></h2>
+                                <p>求知若饥，虚心若愚。</p>
+				    			
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // .col-md-12 -->
+                </div>
+                <div class="herofade beige-dk"></div>
+            </div>
+        </section>
+
+        <!-- Height spacing helper -->
+        <div class="heightblock"></div>
+        <!-- // End height spacing helper -->
+
+        <!-- ============================ END Hero Image =========================== -->
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-03-27T12:48:59.000Z" itemprop="datePublished">
+          2016-03-27
+      </time>
+    
+    
+    | 
+    <a href='/tags/架构/'>架构</a>
+    
+    
+</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span id="busuanzi_container_page_pv">浏览:<span id="busuanzi_value_page_pv"></span></span>
+                <h1>SPA-单页Web应用</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="1-什么是SPA？"><a href="#1-什么是SPA？" class="headerlink" title="1.什么是SPA？"></a>1.什么是SPA？</h3><p>SPA是英文的缩写，全称是Single Page Application，即单页Web应用。</p>
+<p>SPA：</p>
+<blockquote>
+<p>1.SPA是一种介绍特殊web应用的理念 （是什么）<br>2.SPA可以提供最贴近于Native应用的用户体验 （干什么）<br>3.SPA可以用在：（在哪用）</p>
+<blockquote>
+<p>a.跨平台的浏览器内核（webkit）的页面<br>（如：微信页面、Native App页面（手机QQ里面的QQ空间））<br>b.用web技术开发类似Native应用的App<br>（如：Telkomsel Moovigo，馋口街，爱班级）<br>c.机顶盒里的页面（拥有webkit内核）<br>（如：华为Digice项目）</p>
+</blockquote>
+</blockquote>
+<hr>
+<h3 id="2-详细介绍SPA"><a href="#2-详细介绍SPA" class="headerlink" title="2.详细介绍SPA"></a>2.详细介绍SPA</h3><p>详细说明SPA到底是个什么东西，看过几个前端研发写的博客，他们都有不同的理解：<br>子凡：</p>
+<blockquote>
+<p>单页Web应用是一种特殊的Web应用。它将所有的活动局限于一个Web页面中，仅在该Web页面初始化时加载相应的HTML、JavaScript和CSS。一旦页面加载完成了，SPA不会因为用户的操作而进行页面的重新加载或跳转。<br>取而代之的是利用JavaScript动态的变换HTML的内容，从而实现UI与用户的交互。由于避免了页面的重新加载，SPA可以提供较为流畅的用户体验。</p>
+</blockquote>
+<p>民工精髓：</p>
+<blockquote>
+<p>所谓单页应用，指的是在一个页面上集成多种功能，甚至整个系统就只有一个页面，所有的业务功能都是它的子模块，通过特定的方式挂接到主界面上。它是AJAX技术的进一步升华，把AJAX的无刷新机制发挥到极致，因此能造就与桌面程序媲美的流畅用户体验。<br>其实单页应用我们并不陌生，很多人写过ExtJS的项目，用它实现的系统，很天然的就已经是单页的了，也有人用jQuery或者其他框架实现过类似的东西。用各种JS框架，甚至不用框架，都是可以实现单页应用的，它只是一种理念。有些框架适用于开发这种系统，如果使用它们，可以得到很多便利。</p>
+</blockquote>
+<p>伯乐：</p>
+<blockquote>
+<p>单页面应用是仅包含单个网页的应用，目的是为了提供类似于本地应用的流畅用户体验。</p>
+</blockquote>
+<p>大熊君：</p>
+<blockquote>
+<p>所谓的单页面结构就是指多个页面间切换时，不刷新当前整个页面，更新页面展示数据，并且相应地改变地址栏中的url，以使用户可以分享这个url。</p>
+</blockquote>
+<p>再说说我的理解：</p>
+<blockquote>
+<p>单页应用就是通过一个主入口获取应用大部分资源，使用路由机制实现页面跳转的应用。</p>
+</blockquote>
+<hr>
+<h3 id="3-SPA的实际例子"><a href="#3-SPA的实际例子" class="headerlink" title="3.SPA的实际例子"></a>3.SPA的实际例子</h3><p>因为手机的浏览器内核是个残废，所以单页Web应用主要用在移动端。但不是说单页Web应用在PC端就不可用使用，PC的浏览器内核健壮性强得没话说，如果再加上SPA技术的话，页面交互那更是棒棒的！<br>使用SPA的网站有：<br>CODING：<strong><a href="https://coding.net/pp" target="_blank" rel="external">https://coding.net/pp</a></strong><br>Teambition：<strong><a href="https://bbs.teambition.com" target="_blank" rel="external">https://bbs.teambition.com</a></strong><br>阿里云控制台：<strong><a href="https://home.console.aliyun.com/#/" target="_blank" rel="external">https://home.console.aliyun.com</a></strong><br>百度云：<strong><a href="http://yun.baidu.com/#from=share_yun_logo" target="_blank" rel="external">http://yun.baidu.com</a></strong><br>QQ空间：<strong><a href="https://mobile.qzone.qq.com/" target="_blank" rel="external">https://mobile.qzone.qq.com</a></strong><br>YoloSong：<strong><a href="http://music.uodoo.com/" target="_blank" rel="external">http://music.uodoo.com</a></strong><br>Huntnews：<strong><a href="http://huntnews.in/p/index?uc_param_str=dnfrpfbivesscpgimibtbmntnisieijblauputoggdnw" target="_blank" rel="external">http://huntnews.in</a></strong></p>
+<p>使用SPA的手机App、机顶盒TV App有：<br>爱班级、馋口街、Telkomsel Moovigo、Digice TV</p>
+<hr>
+<h3 id="4-SPA的优缺点"><a href="#4-SPA的优缺点" class="headerlink" title="4.SPA的优缺点"></a>4.SPA的优缺点</h3><p>优点：</p>
+<ol>
+<li>良好的交互体验<br>前端进行的是局部渲染，避免了不必要的跳转和重复渲染。</li>
+<li>前后端职责分离，架构清晰<br>前端进行交互逻辑，后端负责数据处理。<br>前后端可以单独开发、单独测试。</li>
+<li>减轻服务器压力<br>服务器只用出数据就可以，不用管展示逻辑和页面合成。</li>
+</ol>
+<p>缺点：</p>
+<ol>
+<li>初次加载耗时多<br>为实现单页Web应用功能及显示效果，需要在加载页面的时候将JavaScript、CSS统一加载，部分页面可以在需要的时候加载。</li>
+<li>前进后退路由管理<br>由于单页Web应用在一个页面中显示所有的内容，所以不能使用浏览器的前进后退功能，所有的页面切换需要自己建立堆栈管理。</li>
+<li>页面模板化和区分代码逻辑<br>由于单页Web应用在一个页面，当单页Web应用规模增大，页面会越来越多，我们需要将页面模板化；业务会越来越多，我们需要根据业务区分代码逻辑。</li>
+<li>SEO难度较大<br>单页Web应用因为只有一个页面主入口，所以很难被搜索引擎收录。</li>
+</ol>
+<p>其实上面说到的前三个问题都已经得到了解决，唯独最后一个还未找到解决方案。<br>因为单页Web应用最根本的缺陷就是不利于SEO，因为界面的绝大部分都是动态生成的，所以搜索引擎很不容易索引它。</p>
+<hr>
+<h3 id="5-解决SPA的缺点"><a href="#5-解决SPA的缺点" class="headerlink" title="5.解决SPA的缺点"></a>5.解决SPA的缺点</h3><p>a.初次加载耗时多<br>可以使用模块化框架，按需加载资源。<br>如：使用SeaJS、RequireJS</p>
+<p>b.前进后退路由管理<br>可以使用原生H5 History API。<br>如：window.history.replaceState和window.history.pushState</p>
+<p>可以使用支持路由管理的集合框架。</p>
+<p>补充：</p>
+<blockquote>
+<p>深入说明就是如果用“location.href”实现页面来回跳转会出现资源重复获取、文件重新解析、javascript重新执行、css重新渲染等问题。<br>使用路由机制则不会出现该问题。</p>
+</blockquote>
+<p>c.页面模板化和区分代码逻辑<br>需要引入MV*框架，它们的基本思路都是在JS层创建模块分层和通信机制。<br>这类框架包括Ember.js，Backbone.js，Angular.js，Avalon.js、Vue.js等。</p>
+<hr>
+<h3 id="6-完整SPA项目"><a href="#6-完整SPA项目" class="headerlink" title="6.完整SPA项目"></a>6.完整SPA项目</h3><p>张鑫旭写的<strong><a href="https://github.com/zhangxinxu/mobilebone/" target="_blank" rel="external">mobilebone</a></strong><br>自述：mobile移动端，PC桌面端页面无刷新过场JS骨架，简单、专注！</p>
+<p>赵达写的<strong><a href="https://github.com/zhaoda/spa/" target="_blank" rel="external">spa</a></strong><br>自述：SPA是为构建WebApp设计的路由控制和视图转换框架。</p>
+<p>dolymood的<strong><a href="https://github.com/mobile-router/mobile-router.js" target="_blank" rel="external">mobile-router</a></strong><br>自述：轻量级web端单页面骨架。</p>
+<p>onlyurei的<strong><a href="https://github.com/onlyurei/knockout-spa" target="_blank" rel="external">knockout-spa</a></strong><br>自述：用Knockout做个的SPA。</p>
+<hr>
+<h3 id="7-SPA总结"><a href="#7-SPA总结" class="headerlink" title="7.SPA总结"></a>7.SPA总结</h3><p>最后总结下单页Web应用，SPA的出现最主要的目的是<strong>提升交互体验</strong>。<br>难道使用了SPA就一定能提升交互体验吗？<br>带着这个问题，我对SPA的讲解就结束啦，谢谢！</p>
+<p>附上参考资源：<br>资源一：<strong><a href="http://www.cnblogs.com/axl234/p/5219840.html" target="_blank" rel="external">单页面应用SPA架构</a></strong><br>资源二：<strong><a href="https://github.com/xufei/blog/issues/5" target="_blank" rel="external">构建单页Web应用</a></strong></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2016/04/04/一个爸爸每月要赚多少钱，才能撑起一个家/" style="float: left;">
+        ← 一个爸爸每月要赚多少钱，才能撑起一个家
+    </a>
+    
+    
+    <a class="pull-right" href="/2016/03/14/上海初印象/">
+        上海初印象 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/03/27/SPA-单页Web应用/" data-title="SPA-单页Web应用" data-url="http://vmartaw.com/2016/03/27/SPA-单页Web应用/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"vmartaw"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p><span id="busuanzi_container_site_pv" style='display:none'>您是本站第<span id="busuanzi_value_site_pv"></span>位访问者</span></p>
+                <p>
+                    &copy; 2012<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By 吴伟. All Rights Reserved.
+                </p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>

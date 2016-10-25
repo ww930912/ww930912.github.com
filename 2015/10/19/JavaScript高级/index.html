@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>JavaScript高级 | WUWEI&#39;S BLOG</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="WUWEI">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="generator" content="WUWEI'S BLOG">
+    <meta name="author" content="WUWEI">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="http://7xljcv.com1.z0.glb.clouddn.com/img/favicon.ico" type="image/ico">
+    <link rel="apple-touch-icon" href="http://7xljcv.com1.z0.glb.clouddn.com/img/favicon3.png"/>
+    <link rel="alternate" href="/atom.xml" title="WUWEI&#39;S BLOG" type="application/atom+xml">
+    <link rel="stylesheet" href="http://7xljcv.com1.z0.glb.clouddn.com/css/ally.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="http://7xljcv.com1.z0.glb.clouddn.com/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="http://7xljcv.com1.z0.glb.clouddn.com/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="http://7xljcv.com1.z0.glb.clouddn.com/js/jquery-1.11.2.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="http://7xljcv.com1.z0.glb.clouddn.com/js/html5shiv.min.js"></script>
+    <script src="http://7xljcv.com1.z0.glb.clouddn.com/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- baidu_tongji -->
+    
+
+    <script type="text/javascript">
+    //iOS Web APP
+    if(("standalone" in window.navigator) && window.navigator.standalone){
+      var noddy, remotes = false;
+      document.addEventListener('click', function(event) {
+        noddy = event.target;
+        while(noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
+          noddy = noddy.parentNode;
+        }
+        if('href' in noddy && noddy.href.indexOf('http') !== -1 && (noddy.href.indexOf(document.location.host) !== -1 || remotes)){
+          event.preventDefault();
+          document.location.href = noddy.href;
+        }
+      },false);
+    }
+    </script>
+</script>
+
+
+
+
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="http://7xljcv.com1.z0.glb.clouddn.com/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">TYPES<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/App/" class="animsition-link">App<small>(6)</small></a></li>
+				    
+				    <li><a href="/categories/Browser/" class="animsition-link">Browser<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/CSS/" class="animsition-link">CSS<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Cordova/" class="animsition-link">Cordova<small>(5)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/Hexo/" class="animsition-link">Hexo<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(5)</small></a></li>
+				    
+				    <li><a href="/categories/Life/" class="animsition-link">Life<small>(10)</small></a></li>
+				    
+				    <li><a href="/categories/MVVM/" class="animsition-link">MVVM<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/Markdown/" class="animsition-link">Markdown<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Tools/" class="animsition-link">Tools<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/架构/" class="animsition-link">架构<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/驾考/" class="animsition-link">驾考<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://yanyaner.com/" class="animsition-link">yanyaner</a></li>
+                    
+                    <li><a href="http://bakbio.cn/" class="animsition-link">zhangli</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="http://7xljcv.com1.z0.glb.clouddn.com/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">WUWEI'S BLOG</a></li>
+                            <li class="nolink"><span>Never </span>Give up.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <!-- ============================ Hero Image =========================== -->
+
+        <section id="hero" class="scrollme">
+            <div class="container-fluid element-img" style="background: url(http://7xljcv.com1.z0.glb.clouddn.com/2016/04/23/1.jpg) no-repeat center center fixed;background-size: cover">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                        <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                            <div>
+                            	
+                                <h2>STAY <span>HUNGRY</span> , STAY <span>FOOLISH</span>.</h2>
+                                <p></p>
+				    			
+                                <h2></h2>
+                                <p>求知若饥，虚心若愚。</p>
+				    			
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // .col-md-12 -->
+                </div>
+                <div class="herofade beige-dk"></div>
+            </div>
+        </section>
+
+        <!-- Height spacing helper -->
+        <div class="heightblock"></div>
+        <!-- // End height spacing helper -->
+
+        <!-- ============================ END Hero Image =========================== -->
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2015-10-19T02:06:21.000Z" itemprop="datePublished">
+          2015-10-19
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>
+    
+    
+</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span id="busuanzi_container_page_pv">浏览:<span id="busuanzi_value_page_pv"></span></span>
+                <h1>JavaScript高级</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>当自己能力越来越高的时候，承担的东西就会越来越多。<br>今天告别了华为Telkomsel项目组，告别了无休止加班导致自己没精力学习和总结的机会。<br>JavaScript高级在我看来就是自己做项目时的一些实战用法+高级原理。<br>我将从下面几点开始讲解:</p>
+<blockquote>
+<ul>
+<li>作用域</li>
+<li>闭包</li>
+<li>关键词this</li>
+<li>原型链</li>
+<li>继承</li>
+<li>异步</li>
+<li>高级用法</li>
+</ul>
+</blockquote>
+<hr>
+<h3 id="1-作用域"><a href="#1-作用域" class="headerlink" title="1.作用域"></a>1.作用域</h3><h4 id="1）变量作用域"><a href="#1）变量作用域" class="headerlink" title="1）变量作用域"></a>1）变量作用域</h4><p>请看如下代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a=<span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a);</span><br><span class="line">&#125;</span><br><span class="line">test();</span><br></pre></td></tr></table></figure></p>
+<p>输出结果为：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>请再看如下代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a=<span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line">test();</span><br><span class="line"><span class="built_in">console</span>.log(a);</span><br></pre></td></tr></table></figure></p>
+<p>输出结果为：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ReferenceError</span>: a is not defined</span><br></pre></td></tr></table></figure></p>
+<p>总结：</p>
+<blockquote>
+<p>a. 变量的作用域分成两种：局部变量和全局变量；<br>b. 函数内部可以读取全局变量，函数外部不能读取函数内部的局部变量；</p>
+</blockquote>
+<hr>
+<h4 id="2）函数作用域"><a href="#2）函数作用域" class="headerlink" title="2）函数作用域"></a>2）函数作用域</h4><p>首先看下我之前遇到的一道面试题，简洁而经典，代码如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a=<span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    a=<span class="number">2</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(a);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.a);</span><br><span class="line">    <span class="keyword">var</span> a;</span><br><span class="line">    <span class="built_in">console</span>.log(a);</span><br><span class="line">&#125;</span><br><span class="line">test();</span><br><span class="line"><span class="keyword">new</span> test();</span><br></pre></td></tr></table></figure></p>
+<p>输出结果依次为：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span></span><br><span class="line"><span class="number">2</span>,<span class="literal">undefined</span>,<span class="number">2</span></span><br></pre></td></tr></table></figure></p>
+<p>为什么会是这样的结果呢？请听我一一到来。<br>原因分析：<br>先分析第一行：看总结a、b、c，可以将上述代码重写如成：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a=<span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a=<span class="number">2</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(a);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.a);</span><br><span class="line">    <span class="built_in">console</span>.log(a);</span><br><span class="line">&#125;</span><br><span class="line">test();</span><br></pre></td></tr></table></figure></p>
+<p>答案一下子就懂了吧。</p>
+<p>再分析第二行：看总结d,可以将上述代码重写如成：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a=<span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a=<span class="number">2</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(a);<span class="comment">//2</span></span><br><span class="line">    <span class="comment">//console.log(this.a);</span></span><br><span class="line">    <span class="built_in">console</span>.log(a);<span class="comment">//2</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> t=<span class="keyword">new</span> test();</span><br><span class="line">t.a <span class="comment">//undefined</span></span><br></pre></td></tr></table></figure></p>
+<p>当使用new关键字时，会生成test的实例化对象t，如果直接是new test()，生成的是匿名对象。this指该对象，由于没有a这个属性，因此是undefined。<br>总结：</p>
+<blockquote>
+<p>a. 在JavaScript中没有块级作用域，而是函数作用域；<br>b. 函数作用域：变量在声明它的函数以及这个函数里面的函数内都是有定义的。<br>c. 对于直接定义的函数，this指向全局window对象；<br>d. 对于对象的方法和属性，this指向实例化对象；<br>简单一句话：<strong>在JavaScript中，变量提前声明，局部变量的优先级高于全局变量。</strong></p>
+</blockquote>
+<hr>
+<h4 id="3）作用域链"><a href="#3）作用域链" class="headerlink" title="3）作用域链"></a>3）作用域链</h4><p>请看如下代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name=<span class="string">"a"</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> name=<span class="string">"b"</span>;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">c1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> name=<span class="string">"c"</span>;</span><br><span class="line">        <span class="built_in">console</span>.log(name);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">c2</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(name);</span><br><span class="line">    &#125;</span><br><span class="line">    c1();</span><br><span class="line">    c2();</span><br><span class="line">&#125;</span><br><span class="line">b();</span><br></pre></td></tr></table></figure></p>
+<p>输出结果为：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">c </span><br><span class="line">b</span><br></pre></td></tr></table></figure></p>
+<p>如果把第三行干掉，代码如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name=<span class="string">"a"</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">c1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> name=<span class="string">"c"</span>;</span><br><span class="line">        <span class="built_in">console</span>.log(name);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">c2</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(name);</span><br><span class="line">    &#125;</span><br><span class="line">    c1();</span><br><span class="line">    c2();</span><br><span class="line">&#125;</span><br><span class="line">b();</span><br></pre></td></tr></table></figure></p>
+<p>输出结果为：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">c </span><br><span class="line">a</span><br></pre></td></tr></table></figure></p>
+<p>当执行c1时，将创建函数c1的执行环境(调用对象),并将该对象置于链表开头，然后将函数b的调用对象链接在之后，最后是全局对象。然后从链表开头寻找变量name,很明显name是”c”。<br>但执行c2时，作用域链是：c2-&gt;b-&gt;window,所以name是”a”。</p>
+<p>总结：</p>
+<blockquote>
+<p>在JavasScript中，函数也是对象，每个函数都有自己的执行上下文环境，当代码在这个环境中执行时，会创建变量对象的作用域链，作用域链是一个对象列表或对象链，它保证了变量对象的有序访问。如：在控制台可以用window.b访问到刚刚写的b函数。<br>作用域链的前端是当前代码执行环境的变量对象，常被称之为“活跃对象”，变量的查找会从第一个链的对象开始，如果对象中包含变量属性，那么就停止查找，如果没有就会继续向上级作用域链查找，直到找到全局对象中：作用域链的逐级查找，也会影响到程序的性能，变量作用域链越长对性能影响越大，这也是我们尽量避免使用全局变量的一个主要原因。如：在使用document等内置对象时，先声明出来。</p>
+</blockquote>
+<p>注意：如果在函数内声明变量时一定要加var，否则你声明的是全局变量。</p>
+<hr>
+<h3 id="2-闭包"><a href="#2-闭包" class="headerlink" title="2.闭包"></a>2.闭包</h3><p>什么是闭包呢？在阮一峰的文章中提到过：</p>
+<blockquote>
+<p>闭包就是能够读取其他函数内部变量的函数。<br>由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包简单理解成”定义在一个函数内部的函数”。<br>所以，在本质上，闭包就是将函数内部和函数外部连接起来的一座桥梁。</p>
+</blockquote>
+<p>一个典型的闭包代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createPeople</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> name=<span class="string">''</span>;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    set:<span class="function"><span class="keyword">function</span>(<span class="params">setName</span>)</span>&#123;</span><br><span class="line">      name=setName||<span class="string">'ww'</span>;</span><br><span class="line">    &#125;,</span><br><span class="line">    get:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="string">'name='</span>+name;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> p1=<span class="keyword">new</span> createPeople();</span><br><span class="line">p1.set();</span><br><span class="line">p1.get();<span class="comment">//'name=ww'</span></span><br><span class="line"><span class="keyword">var</span> p2=<span class="keyword">new</span> createPeople();</span><br><span class="line">p2.set(<span class="string">'zl'</span>);</span><br><span class="line">p2.get();<span class="comment">//'name=zl'</span></span><br></pre></td></tr></table></figure></p>
+<p>请看如下代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   <span class="keyword">var</span> num=<span class="number">999</span>;</span><br><span class="line">   add=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      num+=<span class="number">1</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">     <span class="built_in">console</span>.log(num);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">return</span> b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> result=a();</span><br><span class="line">result();<span class="comment">//999</span></span><br><span class="line">add();</span><br><span class="line">result();<span class="comment">//1000</span></span><br></pre></td></tr></table></figure></p>
+<p>总结：</p>
+<blockquote>
+<p>a.闭包可以从函数外部读取函数内部的变量。<br>b.闭包可以将变量的值存放在内存中。</p>
+</blockquote>
+<p>再看如下代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> result=[];</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)&#123;</span><br><span class="line">    result[i]=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="keyword">return</span> i;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line">test()[<span class="number">0</span>](); <span class="comment">//5</span></span><br><span class="line">test()[<span class="number">1</span>](); <span class="comment">//5</span></span><br></pre></td></tr></table></figure></p>
+<p>为什么全是5呢，因为每个函数的作用域链中都保存着对外部函数的活跃对象，他们都引用着同一变量i，当外部函数返回时，此时的i值为5，所以内部的每个函数i的值也为5。<br>怎样解决该问题呢？<br>请看如下代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)&#123;</span><br><span class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(i);</span><br><span class="line">    &#125;)(i);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">test();</span><br></pre></td></tr></table></figure></p>
+<p>总结：</p>
+<blockquote>
+<p>a. 在使用闭包时，由于作用域链机制的影响，闭包只能取得外部函数的最后一个值。<br>b. 由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包，否则会造成网页的性能问题。</p>
+</blockquote>
+<hr>
+<h3 id="3-关键词this"><a href="#3-关键词this" class="headerlink" title="3.关键词this"></a>3.关键词this</h3><p>this的用法可以分为以下三种：<br>1）函数的调用<br>请看如下代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.a=<span class="number">1</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.a);</span><br><span class="line">&#125;</span><br><span class="line">test(); <span class="comment">//1</span></span><br></pre></td></tr></table></figure></p>
+<p>总结：</p>
+<blockquote>
+<p>对于直接定义的函数，this指向全局window对象。</p>
+</blockquote>
+<p>2）对象方法的调用<br>请看如下代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> people=&#123;</span><br><span class="line">   name:<span class="string">'ww'</span>,</span><br><span class="line">   say:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'My name is '</span>+<span class="keyword">this</span>.name);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line">people.say();<span class="comment">//'My name is ww'</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">People</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name=<span class="string">'ww'</span>;</span><br><span class="line">  <span class="keyword">this</span>.say=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'My name is '</span>+<span class="keyword">this</span>.name);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> p=<span class="keyword">new</span> People();</span><br><span class="line">p.say();<span class="comment">//'My name is ww'</span></span><br></pre></td></tr></table></figure></p>
+<p>总结：</p>
+<blockquote>
+<p>对于对象的方法和属性，this指向实例化对象。</p>
+</blockquote>
+<p>3）call/apply的调用<br>call/apply第一个参数表示改变后的调用这个函数的对象。<br>如果call/apply的参数为空时，默认调用全局window对象。<br>请看如下代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name=<span class="string">'global'</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">People</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name=<span class="string">'ww'</span>;</span><br><span class="line">  <span class="keyword">this</span>.say=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'My name is '</span>+<span class="keyword">this</span>.name);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> p=<span class="keyword">new</span> People();</span><br><span class="line">p.say.apply(p);<span class="comment">//'My name is ww'</span></span><br><span class="line">p.say.apply(); <span class="comment">//'My name is global'</span></span><br><span class="line"></span><br><span class="line">p.say.call(p);<span class="comment">//'My name is ww'</span></span><br><span class="line">p.say.call(); <span class="comment">//'My name is global'</span></span><br></pre></td></tr></table></figure></p>
+<p>总结：</p>
+<blockquote>
+<p>用call/apply方法能改变this指向</p>
+</blockquote>
+<hr>
+<h3 id="4-原型链"><a href="#4-原型链" class="headerlink" title="4.原型链"></a>4.原型链</h3><p>请看如下代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">People</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name=<span class="string">'ww'</span>;</span><br><span class="line">  <span class="keyword">this</span>.say=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'My name is '</span>+<span class="keyword">this</span>.name);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> p=<span class="keyword">new</span> People();</span><br><span class="line">p.__proto__ === People.prototype <span class="comment">//true</span></span><br><span class="line">People.prototype.__proto__ === <span class="built_in">Object</span>.prototype <span class="comment">//true</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.__proto__ <span class="comment">//null</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">People.__proto__ === <span class="built_in">Function</span>.prototype <span class="comment">//true</span></span><br><span class="line"><span class="built_in">Function</span>.prototype.__proto__ === <span class="built_in">Object</span>.prototype <span class="comment">//true</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.__proto__ <span class="comment">//null</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Function</span>.__proto__ === <span class="built_in">Function</span>.prototype <span class="comment">//true</span></span><br><span class="line"><span class="built_in">Function</span>.prototype.__proto__  == <span class="built_in">Object</span>.prototype <span class="comment">//true</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.__proto__ <span class="comment">//null</span></span><br></pre></td></tr></table></figure></p>
+<p>控制台显示结果如下：<br><img src="http://7xljcv.com1.z0.glb.clouddn.com/2015/10/22/JavaScript%E9%AB%98%E7%BA%A7%EF%BC%88%E4%BA%8C%EF%BC%89/a.png" alt="此处输入图片的描述"></p>
+<p>总结：</p>
+<blockquote>
+<p>a. 使用__proto__串起来的链叫做原型链。如上面代码得到的原型链如下：</p>
+<blockquote>
+<ol>
+<li>p -&gt; __proto__ -&gt; People.prototype -&gt; __proto__ -&gt;  Object.prototype -&gt; __proto__ -&gt; null；</li>
+<li>People -&gt; __proto__ -&gt; Function.prototype -&gt; __proto__ -&gt;  Object.prototype -&gt; __proto__ -&gt; null；</li>
+<li>Function -&gt; __proto__ -&gt; Function.prototype -&gt; __proto__ -&gt;  Object.prototype -&gt; __proto__ -&gt; null；</li>
+</ol>
+</blockquote>
+<p>b. JS在创建对象的时候，都有一个叫做__proto__的内置属性，用于指向创建它的函数对象的prototype属性。<br>c. 原型链__proto__属性才是真正的原型链的实际指针。<br>d. 原型链的顶端是Object.prototype.__proto__且它的值为null。</p>
+</blockquote>
+<p>请再看如下代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">People</span>(<span class="params">name</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name=name;</span><br><span class="line">  <span class="keyword">this</span>.say=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'My name is '</span>+<span class="keyword">this</span>.name);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">People.prototype = &#123;category:<span class="string">'animals'</span>&#125;</span><br><span class="line"><span class="keyword">var</span> ww=<span class="keyword">new</span> People(<span class="string">'ww'</span>);</span><br><span class="line"><span class="keyword">var</span> zl=<span class="keyword">new</span> People(<span class="string">'zl'</span>);</span><br><span class="line">ww.category;<span class="comment">//'animals'</span></span><br><span class="line">zl.category;<span class="comment">//'animals'</span></span><br><span class="line">ww.constructor === People.prototype.constructor;<span class="comment">//true</span></span><br></pre></td></tr></table></figure></p>
+<p>总结：</p>
+<blockquote>
+<p>a. prototype属性包含一个对象，所有实例对象需要共享的属性和方法都放在这个对象里面；那些不需要共享的属性和方法，就放在构造函数里面。<br>b. new关键字实质是用构造函数生成实例对象，实例化对象有三步：</p>
+<blockquote>
+<ol>
+<li>创建对象：ww=newPeople(‘ww’);<br>2.将ww的内部__proto__指向构造它的函数People的prototype，使得ww.constructor===People.prototype.constructo永远成立;</li>
+<li>将ww作为this去调用构造函数People，从而设置其对象属性和方法并初始化。</li>
+</ol>
+</blockquote>
+</blockquote>
+<p>请再看如下代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">People</span>(<span class="params">name</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name=name;</span><br><span class="line">  <span class="keyword">this</span>.say=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'My name is '</span>+<span class="keyword">this</span>.name);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">People.prototype = &#123;category:<span class="string">'animals'</span>&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Dog</span>(<span class="params">name</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name=name;</span><br><span class="line">  <span class="keyword">this</span>.say=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"My dog's name is "</span>+<span class="keyword">this</span>.name);</span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> ww=<span class="keyword">new</span> People(<span class="string">'ww'</span>);</span><br><span class="line"><span class="keyword">var</span> wc=<span class="keyword">new</span> Dog(<span class="string">'wc'</span>);</span><br><span class="line"></span><br><span class="line">ww <span class="keyword">instanceof</span> People;<span class="comment">//true</span></span><br><span class="line">ww <span class="keyword">instanceof</span> <span class="built_in">Function</span>;<span class="comment">//false</span></span><br><span class="line">ww <span class="keyword">instanceof</span> <span class="built_in">Object</span>;<span class="comment">//true</span></span><br><span class="line">People <span class="keyword">instanceof</span> <span class="built_in">Object</span>;<span class="comment">//true</span></span><br><span class="line"></span><br><span class="line">People.prototype.isPrototypeOf(ww);<span class="comment">//true</span></span><br><span class="line">People.prototype.isPrototypeOf(wc);<span class="comment">//false</span></span><br><span class="line"></span><br><span class="line">ww.hasOwnProperty(<span class="string">'name'</span>);<span class="comment">//true</span></span><br><span class="line">ww.hasOwnProperty(<span class="string">'category'</span>);<span class="comment">//false</span></span><br><span class="line"></span><br><span class="line"><span class="string">'name'</span> <span class="keyword">in</span> ww;<span class="comment">//true</span></span><br><span class="line"><span class="string">'category'</span> <span class="keyword">in</span> ww;<span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> wwProto=<span class="built_in">Object</span>.getPrototypeOf(ww);</span><br><span class="line"><span class="keyword">var</span> wcProto=<span class="built_in">Object</span>.getPrototypeOf(wc);</span><br><span class="line">wwProto.category; <span class="comment">//'animals'</span></span><br><span class="line">wwProto.category; <span class="comment">//undefined</span></span><br></pre></td></tr></table></figure></p>
+<p>总结：</p>
+<blockquote>
+<p>a. instanceof可以用来检测某个对象是不是另一个对象的实例,也可以用来检测多重继承。<br>b. isPrototypeOf()方法用来判断某个proptotype对象和某个实例之间的关系。<br>c. hasOwnProperty()方法用来判断某一个属性到底是本地属性，还是继承自prototype对象的属性。<br>d. in可以用来判断某个实例是否含有某个属性，不管是不是本地属性。<br>e. Object.getPrototypeOf()方法用来获取对象的原型。</p>
+</blockquote>
+<hr>
+<p>这篇终于写完了，可是才写到第四点，在下篇中从第五点继承继续给大家讲解哈。</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2015/10/22/JavaScript高级（二）/" style="float: left;">
+        ← JavaScript高级（二）
+    </a>
+    
+    
+    <a class="pull-right" href="/2015/10/05/插曲之浅谈人生/">
+        插曲之浅谈人生 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2015/10/19/JavaScript高级/" data-title="JavaScript高级" data-url="http://vmartaw.com/2015/10/19/JavaScript高级/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"vmartaw"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p><span id="busuanzi_container_site_pv" style='display:none'>您是本站第<span id="busuanzi_value_site_pv"></span>位访问者</span></p>
+                <p>
+                    &copy; 2012<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By 吴伟. All Rights Reserved.
+                </p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>

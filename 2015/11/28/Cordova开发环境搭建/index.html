@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>Cordova开发环境搭建 | WUWEI&#39;S BLOG</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="WUWEI">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="generator" content="WUWEI'S BLOG">
+    <meta name="author" content="WUWEI">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="http://7xljcv.com1.z0.glb.clouddn.com/img/favicon.ico" type="image/ico">
+    <link rel="apple-touch-icon" href="http://7xljcv.com1.z0.glb.clouddn.com/img/favicon3.png"/>
+    <link rel="alternate" href="/atom.xml" title="WUWEI&#39;S BLOG" type="application/atom+xml">
+    <link rel="stylesheet" href="http://7xljcv.com1.z0.glb.clouddn.com/css/ally.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="http://7xljcv.com1.z0.glb.clouddn.com/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="http://7xljcv.com1.z0.glb.clouddn.com/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="http://7xljcv.com1.z0.glb.clouddn.com/js/jquery-1.11.2.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="http://7xljcv.com1.z0.glb.clouddn.com/js/html5shiv.min.js"></script>
+    <script src="http://7xljcv.com1.z0.glb.clouddn.com/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- baidu_tongji -->
+    
+
+    <script type="text/javascript">
+    //iOS Web APP
+    if(("standalone" in window.navigator) && window.navigator.standalone){
+      var noddy, remotes = false;
+      document.addEventListener('click', function(event) {
+        noddy = event.target;
+        while(noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
+          noddy = noddy.parentNode;
+        }
+        if('href' in noddy && noddy.href.indexOf('http') !== -1 && (noddy.href.indexOf(document.location.host) !== -1 || remotes)){
+          event.preventDefault();
+          document.location.href = noddy.href;
+        }
+      },false);
+    }
+    </script>
+</script>
+
+
+
+
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="http://7xljcv.com1.z0.glb.clouddn.com/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">TYPES<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/App/" class="animsition-link">App<small>(6)</small></a></li>
+				    
+				    <li><a href="/categories/Browser/" class="animsition-link">Browser<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/CSS/" class="animsition-link">CSS<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Cordova/" class="animsition-link">Cordova<small>(5)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/Hexo/" class="animsition-link">Hexo<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(5)</small></a></li>
+				    
+				    <li><a href="/categories/Life/" class="animsition-link">Life<small>(10)</small></a></li>
+				    
+				    <li><a href="/categories/MVVM/" class="animsition-link">MVVM<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/Markdown/" class="animsition-link">Markdown<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Tools/" class="animsition-link">Tools<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/架构/" class="animsition-link">架构<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/驾考/" class="animsition-link">驾考<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://yanyaner.com/" class="animsition-link">yanyaner</a></li>
+                    
+                    <li><a href="http://bakbio.cn/" class="animsition-link">zhangli</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="http://7xljcv.com1.z0.glb.clouddn.com/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">WUWEI'S BLOG</a></li>
+                            <li class="nolink"><span>Never </span>Give up.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <!-- ============================ Hero Image =========================== -->
+
+        <section id="hero" class="scrollme">
+            <div class="container-fluid element-img" style="background: url(http://7xljcv.com1.z0.glb.clouddn.com/2016/04/23/1.jpg) no-repeat center center fixed;background-size: cover">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                        <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                            <div>
+                            	
+                                <h2>STAY <span>HUNGRY</span> , STAY <span>FOOLISH</span>.</h2>
+                                <p></p>
+				    			
+                                <h2></h2>
+                                <p>求知若饥，虚心若愚。</p>
+				    			
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // .col-md-12 -->
+                </div>
+                <div class="herofade beige-dk"></div>
+            </div>
+        </section>
+
+        <!-- Height spacing helper -->
+        <div class="heightblock"></div>
+        <!-- // End height spacing helper -->
+
+        <!-- ============================ END Hero Image =========================== -->
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2015-11-28T14:51:56.000Z" itemprop="datePublished">
+          2015-11-28
+      </time>
+    
+    
+    | 
+    <a href='/tags/Cordova/'>Cordova</a>
+    
+    
+</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span id="busuanzi_container_page_pv">浏览:<span id="busuanzi_value_page_pv"></span></span>
+                <h1>Cordova开发环境搭建</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="Cordova开发环境搭建-Android"><a href="#Cordova开发环境搭建-Android" class="headerlink" title="Cordova开发环境搭建-Android"></a>Cordova开发环境搭建-Android</h3><p>尽管Cordova可以让我们用Web技术来开发App，但是它的一些工具是需要依赖原生的SDK（Soft Development ToolKit）工具的，部署到真机测试的时候我们也需要原生的SDK工具，所以我们需要安装原生的SDK工具才能进行Cordova App的开发，尽管我们不需要写原生代码。<br>所以使用Cordova开发App，不管你是给哪个平台开发App，最好搭建原生的App集成开发环境（包括JDK+SDK+IDE，如：Eclipse，Xcode）。利用原生的开发环境开发Cordova，部署到真机测试也比利用Cordova命令行工具快的多，方便的多。<br>目前市场上面不少只是对Cordova包了一层皮，提供一站式开发，打包服务的第三方Cordova开发平台，我是不推荐使用的，不灵活，也阻碍我们对Cordova深入了解学习。</p>
+<p>这里我先讲Mac OS上面Android开发环境的搭建。<br>本节包括以下几个方面内容：<br>安装配置JDK<br>安装配置adt-bundle（Android SDK+Eclipse+ADT plugin）<br>安装加速安卓模拟器HAXM</p>
+<hr>
+<h3 id="安装配置JDK"><a href="#安装配置JDK" class="headerlink" title="安装配置JDK"></a>安装配置JDK</h3><p>1.点击这里下载<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="external"><strong>JDK8</strong></a>、<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html" target="_blank" rel="external"><strong>JDK7</strong></a>；<br>2.双击下载的安装包，安装JDK；<br>3.配置JAVA_HOME系统环境变量，运行命令：javac -version输出类似下面的内容说明安装成功。<br><img src="http://7xljcv.com1.z0.glb.clouddn.com/cordova/c2.png" alt="cordova" title="cordova"></p>
+<hr>
+<h3 id="安装Android-SDK"><a href="#安装Android-SDK" class="headerlink" title="安装Android SDK"></a>安装Android SDK</h3><p>下面讲下adt-bundle（Android SDK+Eclipse+ADT elcipse插件集成包）的安装和配置。<br>1.首先下载adt-bundle；<br>adt-bundle下载地址：<a href="https://dl.google.com/android/adt/adt-bundle-mac-x86_64-20140702.zip" target="_blank" rel="external">https://dl.google.com/android/adt/adt-bundle-mac-x86_64-20140702.zip</a>（需翻墙）<br>2.下载完后解压即可；<br>3.为了让Cordova命令行工具能够工作，我们需要就爱那个sdk/tools和sdk/platform-tools追加到系统环境变量中去；<br>4.安装SDK更新包，除了安装基本的包外，注意要让安卓模拟器在mac上运行更快，必须安装以下东西；<br><img src="http://7xljcv.com1.z0.glb.clouddn.com/cordova/c3.png" alt="cordova" title="cordova"></p>
+<p><img src="http://7xljcv.com1.z0.glb.clouddn.com/cordova/c4.png" alt="cordova" title="cordova"></p>
+<p>5.下载完成后，找到sdk/extras/intel目录，该目录下面就是HAXM的插件，点击执行安装HAXM；<br><img src="http://7xljcv.com1.z0.glb.clouddn.com/cordova/c5.png" alt="cordova" title="cordova"></p>
+<p>6.终于要大功告成了，建议先重启一下电脑，然后去配置AVD，注意CPU/ABI的选项；<br><img src="http://7xljcv.com1.z0.glb.clouddn.com/cordova/c6.png" alt="cordova" title="cordova"></p>
+<p>7.启动安装模拟器，是不是打开速度变得非常快。<br><img src="http://7xljcv.com1.z0.glb.clouddn.com/cordova/c7.png" alt="cordova" title="cordova"></p>
+<hr>
+<h3 id="Cordova命令行开发工具（CLI）"><a href="#Cordova命令行开发工具（CLI）" class="headerlink" title="Cordova命令行开发工具（CLI）"></a>Cordova命令行开发工具（CLI）</h3><p>Cordova命令行工具（以下简称CLI）是用来创建和初始化一个Cordova项目的，编译并将他们部署到真机或者模拟器上面。<br>当然你也可以只是利用Cordova命令创建初始化新的项目然后转到各自特定平台的原生集成开发环境中去开发（推荐使用这种高效率的开发方式，下面章节我会讲解）。<br>Cordova CLI是通过npm包（package）形式分发的，不需要从源码编译安装。</p>
+<p>安装Cordova CLI<br>1.首先下载Node.js，下载后双击安装包，按照提示，一路安装即可；<br>2.将nodejs配置到系统环境变量中，以便在终端中可以直接运行node和npm命令，如下图所示，则配置成功；<br><img src="http://7xljcv.com1.z0.glb.clouddn.com/cordova/c8.png" alt="cordova" title="cordova"></p>
+<p>3.使用npm命令自动化安装Cordova；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g cordova</span><br></pre></td></tr></table></figure></p>
+<p>-g选项表示将cordova安装为全局模块，这样你在任何目录下面都能直接调用cordova命令。</p>
+<hr>
+<h3 id="Cordova开发环境搭建-IOS"><a href="#Cordova开发环境搭建-IOS" class="headerlink" title="Cordova开发环境搭建-IOS"></a>Cordova开发环境搭建-IOS</h3><p>上面讲解了Android开发环境的搭建，接下来将讲述IOS开发环境的搭建，苹果的大部分东西都是闭源的，就连IOS的开发环境理论都必须要用Mac OS X系统（不建议使用虚拟机，黑苹果），所以你需要：</p>
+<ul>
+<li>一台装有最新OS X系统的Mac电脑；</li>
+<li>一部使用IOS7.0以上的苹果设备（IPhone、ITouch、IPad）；</li>
+<li>一个苹果ID账号；</li>
+<li>一个苹果开发者账号。目前最新苹果开发者账号（免费版）就可以让你的App跑到真机上面了，但是如果你要发布App到苹果应用商店，仍然需要688元每年的会员费（个人版）。</li>
+</ul>
+<p>本节包括以下几个方面内容：<br>安装配置Xcode；<br>安装配置Cordova命令行工具</p>
+<hr>
+<h3 id="安装配置Xcode"><a href="#安装配置Xcode" class="headerlink" title="安装配置Xcode"></a>安装配置Xcode</h3><p>打开你的Mac电脑，从App Store搜索Xcode，点击安装即可。</p>
+<hr>
+<h3 id="安装Cordova-CLI"><a href="#安装Cordova-CLI" class="headerlink" title="安装Cordova CLI"></a>安装Cordova CLI</h3><p>1.确认你的Mac是否已经安装了Node.js；<br>2.确认你的Mac是否已经使用npm命令自动化安装Cordova；<br>3.安装部署工具<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g ios-sim</span><br><span class="line">sudo npm install -g ios-deploy</span><br></pre></td></tr></table></figure></p>
+<p>OK！至此Cordova开发环境搭建完成，我们可以开发Cordova App啦，在下面的”创建HelloWorld项目”一章中我会详细演示利用cordova命令和集成开发环境来开发、调试Cordova App的流程。</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2015/11/29/创建HelloWorld项目/" style="float: left;">
+        ← 创建HelloWorld项目
+    </a>
+    
+    
+    <a class="pull-right" href="/2015/11/27/开发Cordova-App的黄金守则/">
+        开发Cordova App的黄金守则 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2015/11/28/Cordova开发环境搭建/" data-title="Cordova开发环境搭建" data-url="http://vmartaw.com/2015/11/28/Cordova开发环境搭建/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"vmartaw"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p><span id="busuanzi_container_site_pv" style='display:none'>您是本站第<span id="busuanzi_value_site_pv"></span>位访问者</span></p>
+                <p>
+                    &copy; 2012<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By 吴伟. All Rights Reserved.
+                </p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>

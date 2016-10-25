@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>实战Vue（二） | WUWEI&#39;S BLOG</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="WUWEI">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="generator" content="WUWEI'S BLOG">
+    <meta name="author" content="WUWEI">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="http://7xljcv.com1.z0.glb.clouddn.com/img/favicon.ico" type="image/ico">
+    <link rel="apple-touch-icon" href="http://7xljcv.com1.z0.glb.clouddn.com/img/favicon3.png"/>
+    <link rel="alternate" href="/atom.xml" title="WUWEI&#39;S BLOG" type="application/atom+xml">
+    <link rel="stylesheet" href="http://7xljcv.com1.z0.glb.clouddn.com/css/ally.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="http://7xljcv.com1.z0.glb.clouddn.com/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="http://7xljcv.com1.z0.glb.clouddn.com/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="http://7xljcv.com1.z0.glb.clouddn.com/js/jquery-1.11.2.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="http://7xljcv.com1.z0.glb.clouddn.com/js/html5shiv.min.js"></script>
+    <script src="http://7xljcv.com1.z0.glb.clouddn.com/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- baidu_tongji -->
+    
+
+    <script type="text/javascript">
+    //iOS Web APP
+    if(("standalone" in window.navigator) && window.navigator.standalone){
+      var noddy, remotes = false;
+      document.addEventListener('click', function(event) {
+        noddy = event.target;
+        while(noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
+          noddy = noddy.parentNode;
+        }
+        if('href' in noddy && noddy.href.indexOf('http') !== -1 && (noddy.href.indexOf(document.location.host) !== -1 || remotes)){
+          event.preventDefault();
+          document.location.href = noddy.href;
+        }
+      },false);
+    }
+    </script>
+</script>
+
+
+
+
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="http://7xljcv.com1.z0.glb.clouddn.com/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">TYPES<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/App/" class="animsition-link">App<small>(6)</small></a></li>
+				    
+				    <li><a href="/categories/Browser/" class="animsition-link">Browser<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/CSS/" class="animsition-link">CSS<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Cordova/" class="animsition-link">Cordova<small>(5)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/Hexo/" class="animsition-link">Hexo<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(5)</small></a></li>
+				    
+				    <li><a href="/categories/Life/" class="animsition-link">Life<small>(10)</small></a></li>
+				    
+				    <li><a href="/categories/MVVM/" class="animsition-link">MVVM<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/Markdown/" class="animsition-link">Markdown<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Tools/" class="animsition-link">Tools<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/架构/" class="animsition-link">架构<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/驾考/" class="animsition-link">驾考<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://yanyaner.com/" class="animsition-link">yanyaner</a></li>
+                    
+                    <li><a href="http://bakbio.cn/" class="animsition-link">zhangli</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="http://7xljcv.com1.z0.glb.clouddn.com/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">WUWEI'S BLOG</a></li>
+                            <li class="nolink"><span>Never </span>Give up.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <!-- ============================ Hero Image =========================== -->
+
+        <section id="hero" class="scrollme">
+            <div class="container-fluid element-img" style="background: url(http://7xljcv.com1.z0.glb.clouddn.com/2016/04/23/1.jpg) no-repeat center center fixed;background-size: cover">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                        <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                            <div>
+                            	
+                                <h2>STAY <span>HUNGRY</span> , STAY <span>FOOLISH</span>.</h2>
+                                <p></p>
+				    			
+                                <h2></h2>
+                                <p>求知若饥，虚心若愚。</p>
+				    			
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // .col-md-12 -->
+                </div>
+                <div class="herofade beige-dk"></div>
+            </div>
+        </section>
+
+        <!-- Height spacing helper -->
+        <div class="heightblock"></div>
+        <!-- // End height spacing helper -->
+
+        <!-- ============================ END Hero Image =========================== -->
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-10-07T15:13:45.000Z" itemprop="datePublished">
+          2016-10-07
+      </time>
+    
+    
+    | 
+    <a href='/tags/Vue/'>Vue</a>,
+    
+    <a href='/tags/Webpack/'>Webpack</a>
+    
+    
+</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span id="busuanzi_container_page_pv">浏览:<span id="busuanzi_value_page_pv"></span></span>
+                <h1>实战Vue（二）</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<blockquote>
+<p>继续上一次实战Vue的讲解。回顾上篇，主要讲解的内容有使用Vue的准备工作、环境的搭建及分析Vue与JQuery的区别。<br>本章将进一步讲解Vue，我会从Vue作者尤雨溪去年在携程C4技术分享沙龙公开演讲的话语中进行剖析和讲解Vue的语法和思想。</p>
+</blockquote>
+<hr>
+<h4 id="3-2-剖析Vue相关的语句及其语法"><a href="#3-2-剖析Vue相关的语句及其语法" class="headerlink" title="3.2 剖析Vue相关的语句及其语法"></a>3.2 剖析Vue相关的语句及其语法</h4><p>1.应用逻辑状态本身真相只存在一个地方<br>剖析：要想理解整句话的含义，需要理解该句话的关键词，“应用逻辑状态”。<br>什么是应用逻辑状态？我认为应用逻辑状态是指<strong>改变页面的数据</strong>。<br>该数据包括<strong>ajax传递的参数和返回的参数及前端js的参数</strong>。说的有点抽象，举例：<br>a.ajax传递的参数<br>添数据———-&gt;发起投票页面：<br>默认是空的页面，什么都没有填写<br><img src="http://7xljcv.com1.z0.glb.clouddn.com/2016/09/25/text.png" alt="发起投票" title="发起投票"><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">data()&#123;</span><br><span class="line">    <span class="keyword">return</span>&#123;</span><br><span class="line">        params:&#123;</span><br><span class="line">          openID:$.basis.PATH.user.openID||<span class="string">''</span>,</span><br><span class="line">          type:<span class="number">0</span>,<span class="comment">//文字投票</span></span><br><span class="line">          picTemplateID:<span class="number">1000001</span>,<span class="comment">//默认单选</span></span><br><span class="line">          title:<span class="string">''</span>,</span><br><span class="line">          item:[<span class="string">''</span>,<span class="string">''</span>],</span><br><span class="line">          item_type:<span class="number">0</span>,</span><br><span class="line">          descimage:<span class="string">''</span>,</span><br><span class="line">          desc:<span class="string">''</span>,</span><br><span class="line">          endType:<span class="number">0</span>,</span><br><span class="line">          max_choose:<span class="number">1</span>,</span><br><span class="line">          isOpenAnswer:<span class="number">3</span>,</span><br><span class="line">          open_to_creater:<span class="number">1</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>填写好数据之后的页面：<br><img src="http://7xljcv.com1.z0.glb.clouddn.com/2016/09/25/has-text.png" alt="发起投票" title="发起投票"><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">data()&#123;</span><br><span class="line">    <span class="keyword">return</span>&#123;</span><br><span class="line">        params:&#123;</span><br><span class="line">          openID: <span class="string">"oI86Dt_IgGPfsdsXm4cVOKp-9lXQ"</span>,</span><br><span class="line">          type: <span class="number">0</span>,</span><br><span class="line">          picTemplateID: <span class="number">1000001</span>,</span><br><span class="line">          title: <span class="string">"投票标题"</span>,</span><br><span class="line">          item: [</span><br><span class="line">            <span class="string">"选项1"</span>,</span><br><span class="line">            <span class="string">"选项2"</span></span><br><span class="line">          ],</span><br><span class="line">          item_type: <span class="number">1</span>,</span><br><span class="line">          descimage: <span class="string">"base64格式的链接"</span>,</span><br><span class="line">          desc: <span class="string">"关于此投票，说点什么吧"</span>,</span><br><span class="line">          endType: <span class="number">1</span>,</span><br><span class="line">          max_choose: <span class="number">1</span>,</span><br><span class="line">          isOpenAnswer: <span class="number">3</span>,</span><br><span class="line">          open_to_creater: <span class="number">1</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>和以前JQuery相比，这样的好处是应用状态本身只存在params这一个地方，用户进行文本输入和图片上传时，我们不需要挨个去获取DOM的值然后放在params里面，这些过程在Vue的数据绑定中已经动态实现，用户操作什么，params里面的值就自动改变成什么。</p>
+<hr>
+<p>b.ajax返回的参数<br>查数据———-&gt;投票详情页面：<br>去哪儿吃：<br><img src="http://7xljcv.com1.z0.glb.clouddn.com/2016/09/25/eat.png" alt="去哪儿吃" title="去哪儿吃"></p>
+<hr>
+<p><img src="http://7xljcv.com1.z0.glb.clouddn.com/2016/09/25/mulit.png" alt="普通多选" title="普通多选"><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">data()&#123;</span><br><span class="line">    <span class="keyword">return</span>&#123;</span><br><span class="line">        question:<span class="string">''</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">getQuestion()&#123;</span><br><span class="line">    <span class="keyword">var</span> self=<span class="keyword">this</span>;</span><br><span class="line">    $.get(url,(rst)=&gt;&#123;</span><br><span class="line">        self.question=rst;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//通过调用getQuestion方法获取的值</span></span><br><span class="line"><span class="comment">//发起人参与公开去哪儿吃投票</span></span><br><span class="line">question:&#123;</span><br><span class="line">  <span class="string">"type"</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="string">"isone"</span>:<span class="number">0</span>,</span><br><span class="line">  <span class="string">"is_open_answer"</span>:<span class="number">3</span>,</span><br><span class="line">  ...</span><br><span class="line">  ]</span><br><span class="line"><span class="comment">//参与者参与匿名普通多选投票</span></span><br><span class="line">question:&#123;</span><br><span class="line">  <span class="string">"type"</span>: <span class="number">0</span>,</span><br><span class="line">  <span class="string">"isone"</span>:<span class="number">1</span>,</span><br><span class="line">  <span class="string">"is_open_answer"</span>:<span class="number">2</span>,</span><br><span class="line">  ...</span><br><span class="line">  ]</span><br></pre></td></tr></table></figure></p>
+<p>前端通过ajax获取值后会根据返回的值去判断该将怎样的页面展示给用户。每个页面最终只会展示一种效果，要么是场景类投票的效果，要么是普通类投票的效果，因此和上述所说的应用逻辑状态本身只存在一个地方是一致的。</p>
+<hr>
+<p>c.前端js的参数<br>加载中：<br><img src="http://7xljcv.com1.z0.glb.clouddn.com/2016/09/25/loading.png" alt="加载中" title="加载中"><br>给予提示：<br><img src="http://7xljcv.com1.z0.glb.clouddn.com/2016/09/25/loadinginfo.png" alt="给予提示" title="给予提示"></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span><br><span class="line"><span class="selector-class">.hide</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>:none;</span><br><span class="line">&#125;</span><br><span class="line"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'wait hide'</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>JQuery：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'.wait'</span>).removeClass(<span class="string">'hide'</span>);</span><br><span class="line">$.post(url,params,()=&gt;&#123;</span><br><span class="line">    $(<span class="string">'.wait'</span>).addClass(<span class="string">'hide'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>Vue：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">data()&#123;</span><br><span class="line">    <span class="keyword">return</span>&#123;</span><br><span class="line">        waitParams:&#123;</span><br><span class="line">          waitShow:<span class="literal">false</span></span><br><span class="line">        &#125;,</span><br><span class="line">        tipParams:&#123;</span><br><span class="line">          tipShow:<span class="literal">false</span>,</span><br><span class="line">          tipInfo:<span class="string">''</span>,</span><br><span class="line">          isClick:<span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> self=<span class="keyword">this</span>;</span><br><span class="line"><span class="keyword">this</span>.waitParams.waitShow=<span class="literal">true</span>;</span><br><span class="line">$.post(url,params,()=&gt;&#123;</span><br><span class="line">    self.waitParams.waitShow=<span class="literal">false</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>当前端调用接口之前会出现加载中及蒙层，等接口成功返回东西后将其隐藏;还有用户操作不当的时候，需提示其信息。以前JQuery的思路是先获取DOM，然后使用removeClass(‘hide’)将其显示，等成功后addClass(‘hide’)。尽管也很简单，但是没有与数据关联起来，而Vue实现了。</p>
+<blockquote>
+<p>一句话概括，数据改变页面，数据只在一个地方。</p>
+</blockquote>
+<p>2.传统前端数据状态放在DOM表单，应用状态存在多个地方<br>这句话的意思可直接看代码解释：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">method</span>=<span class="string">"post"</span> <span class="attr">action</span>=<span class="string">"/url"</span> <span class="attr">enctype</span>=<span class="string">"multipart/form-data"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"hidden"</span> <span class="attr">class</span>=<span class="string">"openID"</span> <span class="attr">name</span>=<span class="string">"openID"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"hidden"</span> <span class="attr">class</span>=<span class="string">"createKey"</span> <span class="attr">name</span>=<span class="string">"createKey"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"q-input"</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"hook"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">"title"</span> <span class="attr">class</span>=<span class="string">"q-title"</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">placeholder</span>=<span class="string">"(限20个字内)"</span> <span class="attr">maxlength</span>=<span class="string">"20"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"hidden"</span> <span class="attr">class</span>=<span class="string">"endType"</span> <span class="attr">name</span>=<span class="string">"endType"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"hidden"</span> <span class="attr">class</span>=<span class="string">"open_to_creater"</span> <span class="attr">name</span>=<span class="string">"open_to_creater"</span> <span class="attr">value</span>=<span class="string">"1"</span> /&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"hidden"</span> <span class="attr">class</span>=<span class="string">"isRepeatSingle"</span> <span class="attr">name</span>=<span class="string">"isRepeatSingle"</span> <span class="attr">value</span>=<span class="string">"1"</span> /&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"hidden"</span> <span class="attr">class</span>=<span class="string">"isOpenAnswer"</span> <span class="attr">name</span>=<span class="string">"isOpenAnswer"</span> <span class="attr">value</span>=<span class="string">"3"</span> /&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"hidden"</span> <span class="attr">class</span>=<span class="string">"picTemplateID"</span> <span class="attr">name</span>=<span class="string">"picTemplateID"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--应用状态存在多个input里面 --&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>3.DOM只是Model自然的映射，不碰DOM，碰Model<br>Vue的核心思想就是想让前端尽量少用或不用JQuery、Zepto，这样的好处是不需要每次去做重复的事情（获取DOM，改变DOM的值或样式）。使用Vue后，只需要将DOM和Model之间建立好联系，直接碰Model就好。</p>
+<p>4.data就是Model，el就是View，vm就是ViewModel<br>官网上的Demo：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;app&quot;&gt;&#123;&#123; message &#125;&#125;&lt;/div&gt;</span><br><span class="line">vm =new Vue(&#123;</span><br><span class="line">  el: &apos;#app&apos;,</span><br><span class="line">  data: &#123;</span><br><span class="line">    message: &apos;Hello Vue.js!&apos;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>一个完整的vue文件包含以下内容：<br>data就是Model，template就是View，整个export就是ViewModel<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">.hello&#123; font-size:24px &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div class=&apos;hello&apos;&gt;&#123;&#123; message &#125;&#125;&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default&#123;</span><br><span class="line">  data()&#123;</span><br><span class="line">    return&#123;</span><br><span class="line">        message:&apos;Hello Vue.js!&apos;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<p>5.指令本质就是封装DOM操作，每个指令观察一片数据以及管理对应DOM元素，每当观察数据产生变化的时候，它就对应更新其管理的那块DOM<br>要想理解这句话，请看下面的图片：<br><img src="http://7xljcv.com1.z0.glb.clouddn.com/2016/10/06/directive.png" alt="指令" title="指令"><br>DOM监听器：如点击事件click、滚动事件srcoll、输入值改变事件change<br>指令：如v-if、v-show、v-for、v-else、v-model、v-lazy、v-tap（后面会有详细介绍）<br>以v-lazy为例，该指令目的是实现图片的懒加载、加载后以base64方式展现及让图片居中，等用户滚动后，慢慢将其图片加载出来，减少初始资源的请求。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Vue.directive(<span class="string">'lazy'</span>,&#123;</span><br><span class="line">    bind:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">// 准备工作，如注册事件</span></span><br><span class="line">        <span class="built_in">window</span>.addEventListener(<span class="string">'scroll'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">    update:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">//值更新时的工作</span></span><br><span class="line">        <span class="comment">//懒加载、base64转换、图片居中等逻辑操作</span></span><br><span class="line">        ...</span><br><span class="line">        this.el.setAttribute(<span class="string">'src'</span>, <span class="keyword">this</span>.src);</span><br><span class="line">        ...</span><br><span class="line">    &#125;,</span><br><span class="line">    unbind:fucntion()&#123;</span><br><span class="line">        <span class="comment">//清理工作，如移除事件</span></span><br><span class="line">        <span class="built_in">window</span>.removeEventListener(<span class="string">'scroll'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">use：</span><br><span class="line">&lt;img v-lazy=<span class="string">'url1'</span>&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">v-lazy</span>=<span class="string">'url2'</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<p>当使用v-lazy这个指令后，指令会分别观察url1和url2的img元素，当用户滚动时，会将url1和url2传入src属性后，随后图片将加载到各自的img上，最后展现给用户。</p>
+<p>6.DOM里添加listeners，事件修改Model，不修改DOM<br>这个是告诉初学者在使用Vue语法的时候要注意的事项。<br>例如实现点击按钮弹出一个页面<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">page</span> <span class="attr">v-show</span>=<span class="string">'isShow.page'</span>&gt;</span><span class="tag">&lt;/<span class="name">page</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">'openPage()'</span>&gt;</span>按钮<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">openPage()&#123;</span><br><span class="line">    this.isShow.page=true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>7.每一个组件都可以看做是一个ViewModel，所以可以把页面抽象为ViewModel Tree<br>看下面的图：<br><img src="http://7xljcv.com1.z0.glb.clouddn.com/2016/04/11/components.png" alt="viewmodel" title="viewmodel"><br>一个页面可以由多个组件构成，每个组件就是一个viewmodel。因此我们可以像拼积木一样的把页面分割成多个块，然后可以自由地进行拆卸、组装，最后组成自己想展示的页面。这样做的好处就是<strong>多处展示，一处改动</strong>。因为用的组件是同一个。<br>举例说明：<br>发起投票可以分成文字、图片、定日子、看电影、去哪儿吃，<br>没有购买高级功能的用户，只能享受普通用户的特权。文字选项、定日子选项不能超过20个、图片选项、看电影选项、去哪儿吃选项不能超过9个，因此需要根据不同投票类型去展示不同的东西，这时可以封装成同一个组件VoteTipInfo。<br><img src="http://7xljcv.com1.z0.glb.clouddn.com/2016/10/06/text.png" alt="文字投票" title="文字投票"></p>
+<hr>
+<p><img src="http://7xljcv.com1.z0.glb.clouddn.com/2016/10/06/picture.png" alt="图片投票" title="图片投票"></p>
+<p><img src="http://7xljcv.com1.z0.glb.clouddn.com/2016/10/06/code.png" alt="代码" title="代码"></p>
+<p>上面的代码只是提示组件，整个发起页面从上到下分成提示组件、选项组件、背景故事组件、模板组件、时间组件等。</p>
+<hr>
+<h4 id="3-3重点语法的讲解及生命周期（适合理解和学习过vue的）"><a href="#3-3重点语法的讲解及生命周期（适合理解和学习过vue的）" class="headerlink" title="3.3重点语法的讲解及生命周期（适合理解和学习过vue的）"></a>3.3重点语法的讲解及生命周期（适合理解和学习过vue的）</h4><p>1.实现父子组件之间的数据传递<br><figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!-- 父组件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">vote-category</span> <span class="attr">:user-info</span>=<span class="string">'user'</span> <span class="attr">:number.sync</span>=<span class="string">'number'</span>&gt;</span><span class="tag">&lt;/<span class="name">vote-category</span>&gt;</span></span><br><span class="line">data()</span><span class="template-variable">&#123;</span><br><span class="line">  return&#123;</span><br><span class="line">    /**父组件参数**/</span><br><span class="line">    user:&#123;&#125;</span><span class="xml">,</span><br><span class="line">    number:1</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"> components:</span><span class="template-variable">&#123;</span><br><span class="line">      'vote-category':require('../components/ui/home/voteCategory.vue')</span><br><span class="line">    &#125;</span><span class="xml"></span><br><span class="line">    </span><br><span class="line"><span class="comment">&lt;!-- 子组件使用--&gt;</span></span><br><span class="line"></span><span class="template-variable">&#123;&#123; userInfo &#125;</span><span class="xml">&#125;</span><br><span class="line"></span><br><span class="line">props:['userInfo']</span></span><br></pre></td></tr></table></figure></p>
+<p>注意事项：如果传递的不是json对象，请使用sync实现双向绑定。</p>
+<p>2.vue-router实现组件与组件之间的数据传递：<br>方案一：<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$route.router.go(&#123;<span class="string">path:</span><span class="string">'/lucky/list?openID='</span>+openID+<span class="string">'&amp;questionID='</span>+questionID&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>方案二：<br><strong>Vuex</strong><br>该方案适合数据传递有很多值的情况，如json对象等。优点是全局变量，缺点是学习难点稍大，重点理解下modules、store、action这三个概念，自己使用一次就会了。</p>
+<p>3.组件之间可以通过事件系统进行通讯<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//子组件-&gt;父组件 $dispatch()</span></span><br><span class="line">子组件：</span><br><span class="line"><span class="keyword">this</span>.$dispatch(<span class="string">'refreshQuestion'</span>);</span><br><span class="line">父组件：</span><br><span class="line">methods:&#123;</span><br><span class="line">    getQuestion()&#123;</span><br><span class="line">        <span class="comment">//最终执行的代码</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br><span class="line">events:&#123;</span><br><span class="line">    refreshQuestion()&#123;</span><br><span class="line">        <span class="keyword">this</span>.getQuestion();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//父组件-&gt;子组件 $boardcast()</span></span><br><span class="line"><span class="comment">// return false阻断传递</span></span><br><span class="line">（没怎么用过,使用的场合很少）</span><br></pre></td></tr></table></figure></p>
+<p>4.track-by、\$index的讲解<br>track-by在v-for指令上使用能复用vm和DOM元素，提供渲染效率。\$index即当json格式的数组里面没有唯一标识符时使用。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//有唯一标识符时：</span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"img-list"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"img-item"</span> <span class="attr">v-for</span>=<span class="string">'item in choiceList'</span> <span class="attr">track-by</span>=<span class="string">'business_id'</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"img"</span> <span class="attr">:src</span>=<span class="string">"item.s_photo_url"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">//无唯一标识符时：</span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">'item in list'</span> <span class="attr">track-by</span>=<span class="string">'$index'</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"header-img"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">v-lazy</span>=<span class="string">'item.HEADIMGURL'</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>5.v-clock的讲解<br>v-clock这个指令可以隐藏未编译的Mustache标签直到实例准备完毕。<br>简单讲就是括号里面的值真正编译成功后才展示到页面上，页面上不会出现形式的字符串，只会出现赋的值。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span><br><span class="line"> <span class="selector-attr">[v-cloak]</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: none;</span><br><span class="line"> &#125;</span><br><span class="line"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>  @<span class="attr">click</span>=<span class="string">'createVote'</span> <span class="attr">v-cloak</span>&gt;</span></span><br><span class="line">    我也要发起&#123;&#123; createVoteInfo &#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>6.\:style和\:class的妙用<br>该使用可以对相同页面的不同风格进行随意改变，如差不多的页面有相同的按钮，只是颜色稍有点不同，如去哪儿吃页面要显示红色文字、看电影页面要显示蓝色文字，那么可以这样使用。<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- style用法 --&gt;</span><br><span class="line">&lt;ul class="options"&gt;</span><br><span class="line">    &lt;li v-for='item in question.item' track-by='item_index'&gt;</span><br><span class="line">        &lt;div class="progress"&gt;</span><br><span class="line">            &lt;div :data-value="item.percentage" :style='&#123;width:"0%",background: colors[$index] &#125;'&gt;&lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- class用法 --&gt;</span><br><span class="line">&lt;span </span><br><span class="line">:class='["cardType",selectClass.titleClass]' v-cloak&gt;</span><br><span class="line">&#123;&#123; selectClass.titleName &#125;&#125;</span><br><span class="line">&lt;/span&gt;</span><br><span class="line"></span><br><span class="line">data()&#123;</span><br><span class="line">    return&#123;</span><br><span class="line">        selectClass:&#123;&#125;,</span><br><span class="line">        voteClass:&#123;</span><br><span class="line">            eat:&#123;</span><br><span class="line">              titleName:'去哪儿吃',</span><br><span class="line">              titleClass:'eat',</span><br><span class="line">              color:'#A33B34'</span><br><span class="line">           &#125;,</span><br><span class="line">           moive:&#123;</span><br><span class="line">              titleName:'看电影',</span><br><span class="line">              titleClass:'moive',</span><br><span class="line">              color:'#6066FC'</span><br><span class="line">           &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br><span class="line">ready()&#123;</span><br><span class="line">    if(type == 2)&#123;</span><br><span class="line">        this.selectClass=this.voteClass.eat;</span><br><span class="line">    &#125;else if(type == 3)&#123;</span><br><span class="line">        this.selectClass=this.voteClass.moive;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>7.slot的讲解<br>slot翻译过来为<strong>插槽</strong>，顾名思义使用slot可以插些组件到一个页面。简单理解就是子类使用slot后，父类定义的各种组件可以插入子类所设定的模板中。<br>如：<br>投票详情子类detailVote.vue里面定义模板：<br><img src="http://7xljcv.com1.z0.glb.clouddn.com/2016/10/06/parent.png" alt="子类" title="子类"></p>
+<p>投票详情父类detailVoteBasis.vue里面插入组件：<br><img src="http://7xljcv.com1.z0.glb.clouddn.com/2016/10/06/child.png" alt="父类" title="父类"></p>
+<p>8.component is的讲解<br>上面使用slot的时候有个弊端就是一个页面的一个插槽只能对应一个组件，如果一个页面的一个插槽想对应多个组件的话，就需使用component is。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;component  :is=<span class="string">'currentVoteCardView'</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">component</span>&gt;</span></span></span><br><span class="line">data()&#123;</span><br><span class="line">    <span class="keyword">return</span>&#123;</span><br><span class="line">        currentVoteCardView:<span class="string">'vote-card-defaul'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br><span class="line">components:&#123;</span><br><span class="line"><span class="string">'vote-card-default'</span>:<span class="built_in">require</span>(<span class="string">'../../components/ui/detailVote/voteCard/basis/voteCardDefault.vue'</span>),<span class="comment">//默认投票</span></span><br><span class="line"><span class="string">'vote-card-text'</span>:<span class="built_in">require</span>(<span class="string">'../../components/ui/detailVote/voteCard/basis/voteCardText.vue'</span>),<span class="comment">//文字投票（单选、多选）</span></span><br><span class="line"><span class="string">'vote-card-single-image'</span>:<span class="built_in">require</span>(<span class="string">'../../components/ui/detailVote/voteCard/basis/voteCardSingleImage.vue'</span>),<span class="comment">//单图投票（赞与不赞、对与错、星级评比）</span></span><br><span class="line"><span class="string">'vote-card-multiple-image'</span>:<span class="built_in">require</span>(<span class="string">'../../components/ui/detailVote/voteCard/basis/voteCardMultipleImage.vue'</span>),<span class="comment">//多图投票（单选、多选、排序、PK）</span></span><br><span class="line">&#125;</span><br><span class="line">...</span><br><span class="line"><span class="comment">//根据投票picture_template_id确定对应的模块</span></span><br><span class="line"><span class="keyword">var</span> templateId=result[<span class="string">'picture_template_id'</span>];</span><br><span class="line"><span class="keyword">if</span>(templateId == <span class="number">1000001</span> || templateId == <span class="number">1000002</span>)&#123;<span class="comment">//文字投票               </span></span><br><span class="line">self.currentVoteCardView=<span class="string">'vote-card-text'</span>;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(templateId == <span class="number">1</span> || templateId == <span class="number">3</span> || templateId == <span class="number">1002001</span>)&#123;<span class="comment">//单图投票      </span></span><br><span class="line">self.currentVoteCardView=<span class="string">'vote-card-single-image'</span>;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(templateId == <span class="number">31</span> || templateId == <span class="number">32</span> || templateId == <span class="number">33</span> || templateId == <span class="number">34</span>)&#123;<span class="comment">//多图投票    </span></span><br><span class="line">self.currentVoteCardView=<span class="string">'vote-card-multiple-image'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>9.v-text、v-if、v-show、v-else、v-for、v-model、v-lazy、v-tap各种指令的适用场景。<br>v-text适用场景是需要根据不同的状态展示不同的值的时候。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">v-text</span>=<span class="string">'question.status == 1 ? "进行中" : "已关闭"'</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>v-if适用场景是第一次显隐或不需要显隐切换时使用，因为它为false的时候不会生成DOM。<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">span</span> v-<span class="keyword">if</span>=<span class="string">'isOpenClass =="open"'</span>&gt;我发狠话啦，参与投票的小伙伴必须公开数据！&lt;/span&gt;</span><br><span class="line">&lt;<span class="selector-tag">span</span> v-<span class="keyword">else</span>&gt;小伙伴们放心投，此投票已设为匿名投票。&lt;/span&gt;</span><br></pre></td></tr></table></figure></p>
+<p>二选一让它第一次显示哪个的时候可以使用v-if，例子里面只会生成一个span标签。</p>
+<hr>
+<p>v-show适用场景是经常显隐的切换，因为它无论什么时候都会生成DOM。<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">span</span> v-show=<span class="string">'isOpenClass =="open"'</span>&gt;我发狠话啦，参与投票的小伙伴必须公开数据！&lt;/span&gt;</span><br><span class="line">&lt;<span class="selector-tag">span</span> v-<span class="keyword">else</span>&gt;小伙伴们放心投，此投票已设为匿名投票。&lt;/span&gt;</span><br></pre></td></tr></table></figure></p>
+<p>例子里面只会生成两个span标签。<br>v-else就是其他的意思，和v-if或v-show一同使用。</p>
+<hr>
+<p>v-for适用场景是遍历ajax返回的json格式的数组展示其数据，如列表等。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul <span class="class"><span class="keyword">class</span></span>=<span class="string">"img-list"</span>&gt;</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"img-item"</span> <span class="attr">v-for</span>=<span class="string">'item in choiceList'</span> <span class="attr">track-by</span>=<span class="string">'item_index'</span> <span class="attr">v-cloak</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"img hide"</span> <span class="attr">:src</span>=<span class="string">"item.item_image_url"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>v-model适用场景是用户进行输入时，input的值会跟着其改变。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;textarea <span class="class"><span class="keyword">class</span></span>=<span class="string">"reply-text"</span> rows=<span class="string">"10"</span> cols=<span class="string">"10"</span> placeholder=<span class="string">"回复 &#123;&#123; commentWho.nikename &#125;&#125;："</span></span><br><span class="line">v-model=<span class="string">'commentWho.content'</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">&lt;input placeholder=<span class="string">"填写个数"</span> type=<span class="string">'number'</span> v-model=<span class="string">'price.total'</span>&gt;</span><br></pre></td></tr></table></figure></p>
+<p>v-lazy适用场景是图片懒加载。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"header-img"</span>&gt;</span><br><span class="line">	<span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">v-lazy</span>=<span class="string">'item.HEADIMGURL'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<p>v-tap适用场景是想阻止200ms的延迟点击，想快速点击。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"add-option"</span> v-tap=<span class="string">'addItem()'</span> v-show=<span class="string">'isAddOpen'</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<p>10.页面的生命周期<br><img src="http://7xljcv.com1.z0.glb.clouddn.com/2016/10/06/lifecycle.png" alt="生命周期" title="生命周期"></p>
+<p>重点理解生命周期的created、ready、attached、watch、computed。</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2016/10/23/移动互联网/" style="float: left;">
+        ← 移动互联网
+    </a>
+    
+    
+    <a class="pull-right" href="/2016/07/23/移动端Web之经验总结/">
+        移动端Web之经验总结 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/10/07/实战Vue（二）/" data-title="实战Vue（二）" data-url="http://vmartaw.com/2016/10/07/实战Vue（二）/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"vmartaw"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p><span id="busuanzi_container_site_pv" style='display:none'>您是本站第<span id="busuanzi_value_site_pv"></span>位访问者</span></p>
+                <p>
+                    &copy; 2012<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By 吴伟. All Rights Reserved.
+                </p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
