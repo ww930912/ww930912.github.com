@@ -20,3 +20,5 @@ react-native-navigtion
 react-native-swiper
 react-native-video
 ```
+
+  [1]: https://github.com/facebook/react-native
