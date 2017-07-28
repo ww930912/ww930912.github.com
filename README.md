@@ -16,9 +16,9 @@
 核心技术使用[**React Native**][1]实现。
 使用的React Native相关插件：
 ```
-react-native-navigtion
-react-native-swiper
-react-native-video
+react-native-navigtion //导航，都是原生的，因此性能很好
+react-native-swiper //swiper轮播图
+react-native-video //视频的播放，iOS支持原生全屏播放
 ```
 
   [1]: https://github.com/facebook/react-native
