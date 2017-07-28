@@ -9,6 +9,9 @@
 5. 正在热映，让你了解最新想看的电影。
 
 ---
+![](./demo.gif)
+
+---
 #### 技术栈实现：
 核心技术使用[**React Native**][1]实现。
 使用的React Native相关插件：
@@ -17,6 +20,3 @@ react-native-navigtion
 react-native-swiper
 react-native-video
 ```
-
----
-![](./demo.gif)
