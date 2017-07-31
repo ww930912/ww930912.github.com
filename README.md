@@ -16,9 +16,13 @@
 核心技术使用[**React Native**][1]实现。
 使用的React Native相关插件：
 ```
-react-native-navigtion //导航，都是原生的，因此性能很好
-react-native-swiper //swiper轮播图
-react-native-video //视频的播放，iOS支持原生全屏播放
+react-native-navigtion
+react-native-swiper
+react-native-video
 ```
 
+**Note：**找车场官网由bootstrap4.0实现，请点击**[具体模板地址][2]**查看。
+
+
   [1]: https://github.com/facebook/react-native
+  [2]: https://startbootstrap.com/template-categories/popular/
