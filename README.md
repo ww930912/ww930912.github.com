@@ -21,7 +21,7 @@ react-native-swiper
 react-native-video
 ```
 
-**Note：**找车场官网由bootstrap4.0实现，请点击**[具体模板地址][2]**查看。
+#### Note：找车场官网由bootstrap4.0实现，请点击[**具体模板地址**][2]查看。
 
 
   [1]: https://github.com/facebook/react-native
